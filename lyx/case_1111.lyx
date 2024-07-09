@@ -1,0 +1,1679 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\size huge
+Case I-I-I-I
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I:=-\phi_{i}(W_{u})\frac{W_{u}^{i}}{t-u}du
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+II:=\psi(W_{u})du
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+III:=\phi_{i}(W_{u})(\sigma dB)_{u}^{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+IV:=\sum_{k=1}^{\infty}\frac{\partial G_{k+1}}{\partial x^{i}}\left(W_{u},0\right)\phi_{i}\left(W_{u}\right)(t-u)^{k}du
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}(W_{tr})=\phi_{i}(0)+\left(\partial_{p}\phi_{i}(0)(1-r)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\right)+\left(\frac{1}{2}\partial_{pq}^{2}\phi_{i}(0)(1-r)^{2}\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right)+\ldots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta_{tr}^{i}:=W_{tr}^{i}=(1-r)\cdot\frac{W_{tr}^{i}}{1-r}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{W_{tr}^{i}}{1-r}=\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)+\left(\partial_{p}\bar{b^{i}}(0)\cdot t^{2}\cdot\int_{0}^{r}\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{p}}{t-u}d\eta\right)+\ldots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target,
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{t}\left(\int_{0}^{v}\phi_{i}(W_{u})\frac{W_{u}^{i}}{t-u}du\right)\otimes\phi_{j}\left(W_{v}\right)\frac{W_{v}^{j}}{t-v}dv\otimes\int_{0}^{t}\left(\int_{0}^{v}\phi_{k}(W_{u})\frac{W_{u}^{k}}{t-u}du\right)\otimes\phi_{l}(W_{v})\frac{W_{v}^{l}}{t-v}dv\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Change of variable, 
+\begin_inset Formula $v=t\rho$
+\end_inset
+
+, 
+\begin_inset Formula $u=tr$
+\end_inset
+
+ for the first part, 
+\begin_inset Formula $v=t\theta$
+\end_inset
+
+, 
+\begin_inset Formula $u=t\delta$
+\end_inset
+
+ for the second part.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Formula 
+\[
+=\textcolor{red}{\mathbb{E}\left[\left(\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(W_{tr})\frac{W_{tr}^{i}}{1-r}dr\right)\otimes\phi_{j}(W_{t\rho})\frac{W_{t\rho}^{j}}{1-\rho}d\rho\right)\otimes\left(\int_{0}^{1}\left(\int_{0}^{\theta}\phi_{k}(W_{t\delta})\frac{W_{u}^{k}}{1-\delta}d\delta\right)\otimes\phi_{l}(W_{t\theta})\frac{W_{t\theta}^{l}}{1-\theta}d\theta\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align block
+
+\size largest
+\color blue
+1.
+ Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $\phi_{j}$
+\end_inset
+
+, 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+ or 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+ to order 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\color black
+(i).
+ Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(W_{tr})\frac{W_{tr}^{i}}{1-r}dr\right)\otimes\phi_{j}(W_{t\rho})\frac{W_{t\rho}^{j}}{1-\rho}d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(W_{t\delta})\frac{W_{u}^{k}}{1-\delta}d\delta\otimes\phi_{l}(W_{t\theta})\frac{W_{t\theta}^{l}}{1-\theta}d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\left(\frac{1}{2}\partial_{pq}^{2}\phi_{i}(0)(1-r)^{2}\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right)\frac{W_{tr}^{i}}{1-r}dr\right)\otimes\phi_{j}(0)\frac{W_{t\rho}^{j}}{1-\rho}d\rho\otimes\int_{0}^{1}\left(\int_{0}^{\theta}\phi_{k}(0)\frac{W_{u}^{k}}{1-\delta}d\delta\right)\otimes\phi_{l}(0)\frac{W_{t\theta}^{l}}{1-\theta}d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\partial_{pq}^{2}\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot t^{6}\cdot{\color{red}\frac{1}{2}\cdot\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}(1-r)^{2}\mathbb{E}\left[\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\right]drd\delta d\theta d\rho}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\partial_{pq}^{2}\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\left(\frac{1}{48},\frac{37}{3456},\frac{37}{3456},\frac{533}{17280},\frac{37}{3456},\frac{37}{3456},\frac{257}{17280},\frac{37}{3456},\frac{37}{3456},\frac{257}{17280},\frac{533}{17280},\frac{1}{48},\frac{257}{17280},\frac{533}{17280},\frac{1}{48}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\color black
+(ii).
+ Expand 
+\begin_inset Formula $\phi_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(W_{tr})\frac{W_{tr}^{i}}{1-r}dr\right)\otimes\phi_{j}(W_{t\rho})\frac{W_{t\rho}^{j}}{1-\rho}d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(W_{t\delta})\frac{W_{u}^{k}}{1-\delta}d\delta\otimes\phi_{l}(W_{t\theta})\frac{W_{t\theta}^{l}}{1-\theta}d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(0)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)dr\right)\otimes\left(\frac{1}{2}\partial_{pq}^{2}\phi_{j}(0)(1-r)^{2}\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right)\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(0)\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)d\delta\otimes\phi_{l}(0)\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}(0)\otimes\partial_{pq}^{2}\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot t^{6}\cdot{\color{red}\frac{1}{2}\cdot\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}(1-\rho)^{2}\mathbb{E}\left[\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\right]d\delta drd\theta d\rho}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\partial_{pq}^{2}\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\left(\frac{1}{72},\frac{1}{128},\frac{1}{128},\frac{253}{17280},\frac{253}{17280},\frac{253}{17280},\frac{157}{17280},\frac{157}{17280},\frac{157}{17280},\frac{1}{128},\frac{1}{128},\frac{1}{72},\frac{1}{128},\frac{1}{128},\frac{1}{72}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\color black
+(iii).
+ Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(W_{tr})\frac{W_{tr}^{i}}{1-r}dr\right)\otimes\phi_{j}(W_{t\rho})\frac{W_{t\rho}^{j}}{1-\rho}d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(W_{t\delta})\frac{W_{u}^{k}}{1-\delta}d\delta\otimes\phi_{l}(W_{t\theta})\frac{W_{t\theta}^{l}}{1-\theta}d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}(0)\otimes\phi_{j}(0)\otimes\partial_{pq}^{2}\phi_{k}(0)\otimes\phi_{l}(0)\cdot t^{6}\cdot{\color{red}\frac{1}{2}\cdot\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}(1-\delta)^{2}\mathbb{E}\left[\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\right]drd\delta d\theta d\rho}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\partial_{pq}^{2}\phi_{k}(0)\otimes\phi_{l}(0)\cdot\left(\frac{1}{48},\frac{1}{48},\frac{1}{48},\frac{533}{17280},\frac{37}{3456},\frac{37}{3456},\frac{257}{17280},\frac{257}{17280},\frac{37}{3456},\frac{533}{17280},\frac{37}{3456},\frac{37}{3456},\frac{37}{3456},\frac{533}{17280},\frac{37}{3456}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\color black
+(iv).
+ Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(W_{tr})\frac{W_{tr}^{i}}{1-r}dr\right)\otimes\phi_{j}(W_{t\rho})\frac{W_{t\rho}^{j}}{1-\rho}d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(W_{t\delta})\frac{W_{u}^{k}}{1-\delta}d\delta\otimes\phi_{l}(W_{t\theta})\frac{W_{t\theta}^{l}}{1-\theta}d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\partial_{pq}^{2}\phi_{l}(0)\cdot t^{6}\cdot{\color{red}\frac{1}{2}\cdot\mathbb{E}\left[(1-\theta)^{2}\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\delta drd\theta d\rho\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\partial_{pq}^{2}\phi_{l}(0)\cdot\left(\frac{1}{72},\frac{1}{72},\frac{1}{72},\frac{253}{17280},\frac{253}{17280},\frac{253}{17280},\frac{157}{17280},\frac{1}{128},\frac{1}{128},\frac{157}{17280},\frac{1}{128},\frac{1}{128},\frac{157}{17280},\frac{1}{128},\frac{1}{128}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align block
+
+\size largest
+\color blue
+2.
+ Expand two of 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $\phi_{j}$
+\end_inset
+
+, 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+ or 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+ to order 
+\begin_inset Formula $t^{0.5}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\color black
+(i).
+ Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(W_{tr})\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)dr\right)\otimes\phi_{j}(W_{t\rho})\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(W_{t\delta})\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)d\delta\otimes\phi_{l}(W_{t\theta})\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\left(\partial_{p}\phi_{i}(0)(1-r)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\right)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)dr\right)\otimes\left(\partial_{q}\phi_{j}(0)(1-\rho)\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right)\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(0)\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)d\delta\otimes\phi_{l}(0)\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\partial_{p}\phi_{i}(0)\otimes\partial_{q}\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot t^{6}\cdot{\color{red}\mathbb{E}\left[\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}(1-r)(1-\rho)\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\delta drd\theta d\rho\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\partial_{p}\phi_{i}(0)\otimes\partial_{q}\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\left(\frac{1}{48},\frac{347}{17280},\frac{233}{17280},\frac{347}{17280},\frac{347}{17280},\frac{101}{3456},\frac{233}{17280},\frac{233}{17280},\frac{101}{3456},\frac{115}{3456},\frac{115}{3456},\frac{1}{16},\frac{233}{17280},\frac{347}{17280},\frac{1}{48}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\color black
+(ii).
+ Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(W_{tr})\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)dr\right)\otimes\phi_{j}(W_{t\rho})\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(W_{t\delta})\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)d\delta\otimes\phi_{l}(W_{t\theta})\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\left(\partial_{p}\phi_{i}(0)(1-r)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\right)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)dr\right)\otimes\phi_{j}(0)\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\left(\partial_{q}\phi_{k}(0)(1-\delta)\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right)\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)d\delta\otimes\phi_{l}(0)\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\partial_{p}\phi_{i}(0)\otimes\phi_{j}(0)\otimes\partial_{q}\phi_{k}(0)\otimes\phi_{l}(0)\cdot t^{6}\cdot{\color{red}\mathbb{E}\left[\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}(1-r)(1-\delta)\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\delta drd\theta d\rho\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\partial_{p}\phi_{i}(0)\otimes\phi_{j}(0)\otimes\partial_{q}\phi_{k}(0)\otimes\phi_{l}(0)\cdot\left(\frac{1}{45},\frac{1}{45},\frac{3}{80},\frac{11}{270},\frac{1}{45},\frac{1}{54},\frac{1}{54},\frac{3}{80},\frac{1}{54},\frac{3}{80},\frac{37}{360},\frac{3}{80},\frac{1}{54},\frac{11}{270},\frac{1}{45}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\color black
+(iii).
+ Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(W_{tr})\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)dr\right)\otimes\phi_{j}(W_{t\rho})\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(W_{t\delta})\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)d\delta\otimes\phi_{l}(W_{t\theta})\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\left(\partial_{p}\phi_{i}(0)(1-r)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\right)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)dr\right)\otimes\phi_{j}(0)\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(0)\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)d\delta\otimes\left(\partial_{q}\phi_{l}(0)(1-\theta)\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right)\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\partial_{p}\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\partial_{q}\phi_{l}(0)\cdot t^{6}\cdot{\color{red}\mathbb{E}\left[\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}(1-r)(1-\theta)\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\delta drd\theta d\rho\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\partial_{p}\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\partial_{q}\phi_{l}(0)\cdot\left(\frac{23}{1440},\frac{23}{1440},\frac{23}{1440},\frac{11}{576},\frac{23}{720},\frac{11}{576},\frac{1}{80},\frac{23}{1440},\frac{11}{576},\frac{1}{20},\frac{97}{2880},\frac{97}{2880},\frac{1}{80},\frac{11}{576},\frac{23}{1440}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\color black
+(iv).
+ Expand 
+\begin_inset Formula $\phi_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(W_{tr})\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)dr\right)\otimes\phi_{j}(W_{t\rho})\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(W_{t\delta})\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)d\delta\otimes\phi_{l}(W_{t\theta})\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(0)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)dr\right)\otimes\left(\partial_{p}\phi_{j}(0)(1-\rho)\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\right)\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\left(\partial_{q}\phi_{k}(0)(1-\delta)\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right)\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)d\delta\otimes\phi_{l}(0)\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}(0)\otimes\partial_{p}\phi_{j}(0)\otimes\partial_{q}\phi_{k}(0)\otimes\phi_{l}(0)\cdot t^{6}\cdot{\color{red}\mathbb{E}\left[\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}(1-\rho)(1-\delta)\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\delta drd\theta d\rho\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\partial_{p}\phi_{j}(0)\otimes\partial_{q}\phi_{k}(0)\otimes\phi_{l}(0)\cdot\left(\frac{23}{1440},\frac{23}{1440},\frac{97}{2880},\frac{11}{576},\frac{23}{720},\frac{11}{576},\frac{1}{80},\frac{1}{20},\frac{1}{80},\frac{23}{1440},\frac{97}{2880},\frac{23}{1440},\frac{11}{576},\frac{11}{576},\frac{23}{720}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\color black
+(v).
+ Expand 
+\begin_inset Formula $\phi_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(W_{tr})\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)dr\right)\otimes\phi_{j}(W_{t\rho})\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(W_{t\delta})\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)d\delta\otimes\phi_{l}(W_{t\theta})\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(0)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)dr\right)\otimes\left(\partial_{p}\phi_{j}(0)(1-\rho)\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\right)\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(0)\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)d\delta\otimes\left(\partial_{q}\phi_{l}(0)(1-\theta)\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right)\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}(0)\otimes\partial_{p}\phi_{j}(0)\otimes\phi_{k}(0)\otimes\partial_{q}\phi_{l}(0)\cdot t^{6}\cdot{\color{red}\mathbb{E}\left[\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}(1-\rho)(1-\theta)\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\delta drd\theta d\rho\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\partial_{p}\phi_{j}(0)\otimes\phi_{k}(0)\otimes\partial_{q}\phi_{l}(0)\cdot\left(\frac{7}{540},\frac{7}{320},\frac{7}{540},\frac{19}{1080},\frac{17}{360},\frac{19}{1080},\frac{1}{96},\frac{7}{320},\frac{1}{96},\frac{7}{320},\frac{7}{540},\frac{7}{540},\frac{1}{96},\frac{1}{96},\frac{7}{320}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\color black
+(vi).
+ Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(W_{tr})\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)dr\right)\otimes\phi_{j}(W_{t\rho})\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(W_{t\delta})\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)d\delta\otimes\phi_{l}(W_{t\theta})\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(0)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)dr\right)\otimes\phi_{j}(0)\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\left(\partial_{p}\phi_{k}(0)(1-\delta)\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\right)\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)d\delta\otimes\left(\partial_{q}\phi_{l}(0)(1-\theta)\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right)\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}(0)\otimes\phi_{j}(0)\otimes\partial_{p}\phi_{k}(0)\otimes\partial_{q}\phi_{l}(0)\cdot t^{6}\cdot{\color{red}\mathbb{E}\left[\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}(1-\delta)(1-\theta)\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\delta drd\theta d\rho\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\partial_{p}\phi_{k}(0)\otimes\partial_{q}\phi_{l}(0)\cdot\left(\frac{1}{48},\frac{1}{16},\frac{1}{48},\frac{347}{17280},\frac{101}{3456},\frac{347}{17280},\frac{233}{17280},\frac{233}{17280},\frac{115}{3456},\frac{101}{3456},\frac{347}{17280},\frac{347}{17280},\frac{233}{17280},\frac{115}{3456},\frac{233}{17280}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\color blue
+(3) Expand any of 
+\begin_inset Formula $\frac{W_{tr}^{i}}{1-r}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{W_{t\rho}^{j}}{1-\rho}$
+\end_inset
+
+ , 
+\begin_inset Formula $\frac{W_{t\delta}^{j}}{1-\delta}$
+\end_inset
+
+ or 
+\begin_inset Formula $\frac{W_{t\theta}^{l}}{1-\theta}$
+\end_inset
+
+ to order 
+\begin_inset Formula $t^{1.5}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\color black
+(i).
+ Expand 
+\size huge
+
+\begin_inset Formula $\frac{W_{tr}^{i}}{1-r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(W_{tr})\frac{W_{tr}^{i}}{1-r}dr\right)\otimes\phi_{j}(W_{t\rho})\frac{W_{t\rho}^{j}}{1-\rho}d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(W_{t\delta})\frac{W_{t\delta}^{k}}{1-\delta}d\delta\otimes\phi_{l}(W_{t\theta})\frac{W_{t\theta}^{l}}{1-\theta}d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(0)\left(\partial_{p}\bar{b^{i}}(0)\cdot t^{2}\cdot\int_{0}^{r}\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{p}}{t-u}d\eta\right)dr\right)\otimes\phi_{j}(0)\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(0)\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)d\delta\otimes\phi_{l}(0)\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{p}\bar{b^{i}}(0)\cdot t^{5}\cdot{\color{red}\mathbb{E}\left[\int_{0}^{1}\int_{0}^{1}\int_{0}^{\theta}\int_{0}^{\rho}\int_{0}^{r}\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\eta drd\delta d\rho d\theta\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{p}\bar{b^{i}}(0)\cdot\left(\frac{1}{24}\delta_{pj}\delta_{kl}+\frac{19}{216}\delta_{jl}\delta_{kp}+\frac{7}{216}\delta_{jk}\delta_{lp}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\color black
+(ii).
+ Expand 
+\size largest
+\color blue
+
+\begin_inset Formula $\frac{W_{t\rho}^{j}}{1-\rho}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+.
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(W_{tr})\frac{W_{tr}^{i}}{1-r}dr\right)\otimes\phi_{j}(W_{t\rho})\frac{W_{t\rho}^{j}}{1-\rho}d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(W_{t\delta})\frac{W_{t\delta}^{k}}{1-\delta}d\delta\otimes\phi_{l}(W_{t\theta})\frac{W_{t\theta}^{l}}{1-\theta}d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(0)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)dr\right)\otimes\phi_{j}(0)\left(\partial_{p}\bar{b^{j}}(0)\cdot t^{2}\cdot\int_{0}^{\rho}\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{p}}{t-u}d\eta\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(0)\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)d\delta\otimes\phi_{l}(0)\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{p}\bar{b^{j}}(0)\cdot t^{5}\cdot{\color{red}\mathbb{E}\left[\int_{0}^{1}\int_{0}^{1}\int_{0}^{\theta}\int_{0}^{\rho}\int_{0}^{\rho}\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\eta drd\delta d\rho d\theta\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{p}\bar{b^{j}}(0)\cdot\left(\frac{1}{12}\delta_{ip}\delta_{kl}+\frac{7}{108}\delta_{il}\delta_{kp}+\frac{7}{108}\delta_{ik}\delta_{lp}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\color black
+(iii).
+ Expand 
+\size huge
+
+\begin_inset Formula $\frac{W_{t\delta}^{k}}{1-\delta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(W_{tr})\frac{W_{tr}^{i}}{1-r}dr\right)\otimes\phi_{j}(W_{t\rho})\frac{W_{t\rho}^{j}}{1-\rho}d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(W_{t\delta})\frac{W_{t\delta}^{k}}{1-\delta}d\delta\otimes\phi_{l}(W_{t\theta})\frac{W_{t\theta}^{l}}{1-\theta}d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(0)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)dr\right)\otimes\phi_{j}(0)\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(0)\left(\partial_{p}\bar{b^{k}}(0)\cdot t^{2}\cdot\int_{0}^{\delta}\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{p}}{t-u}d\eta\right)d\delta\otimes\phi_{l}(0)\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{p}\bar{b^{k}}(0)\cdot t^{5}\cdot{\color{red}\mathbb{E}\left[\int_{0}^{1}\int_{0}^{1}\int_{0}^{\theta}\int_{0}^{\rho}\int_{0}^{\delta}\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\eta drd\delta d\rho d\theta\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{p}\bar{b^{k}}(0)\cdot\left(\frac{19}{216}\delta_{ip}\delta_{jl}+\frac{7}{216}\delta_{il}\delta_{jp}+\frac{1}{24}\delta_{ij}\delta_{lp}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\color black
+(iv).
+ Expand 
+\size huge
+
+\begin_inset Formula $\frac{W_{t\theta}^{l}}{1-\theta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(W_{tr})\frac{W_{tr}^{i}}{1-r}dr\right)\otimes\phi_{j}(W_{t\rho})\frac{W_{t\rho}^{j}}{1-\rho}d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(W_{t\delta})\frac{W_{t\delta}^{k}}{1-\delta}d\delta\otimes\phi_{l}(W_{t\theta})\frac{W_{t\theta}^{l}}{1-\theta}d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(0)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)dr\right)\otimes\phi_{j}(0)\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(0)\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)d\delta\otimes\phi_{l}(0)\left(\partial_{p}\bar{b^{l}}(0)\cdot t^{2}\cdot\int_{0}^{\theta}\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{p}}{t-u}d\eta\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{p}\bar{b^{l}}(0)\cdot t^{5}\cdot{\color{red}\mathbb{E}\left[\int_{0}^{1}\int_{0}^{1}\int_{0}^{\theta}\int_{0}^{\theta}\int_{0}^{\rho}\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)drd\eta d\delta d\rho d\theta\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{p}\bar{b^{l}}(0)\cdot\left(\frac{7}{108}\delta_{ip}\delta_{jk}+\frac{7}{108}\delta_{ik}\delta_{jp}+\frac{1}{12}\delta_{ij}\delta_{kp}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\color blue
+4.
+ Freeze all the terms, then expand 
+\begin_inset Formula $a(\cdot)$
+\end_inset
+
+ to order 
+\begin_inset Formula $t$
+\end_inset
+
+ later.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(W_{tr})\frac{W_{tr}^{i}}{1-r}dr\right)\otimes\phi_{j}(W_{t\rho})\frac{W_{t\rho}^{j}}{1-\rho}d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(W_{t\delta})\frac{W_{u}^{k}}{1-\delta}d\delta\otimes\phi_{l}(W_{t\theta})\frac{W_{t\theta}^{l}}{1-\theta}d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\mathbb{E}\left[\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(0)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)dr\right)\otimes\phi_{j}(0)\left(t\cdot\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho\otimes\int_{0}^{1}(\int_{0}^{\theta}\phi_{k}(0)\left(t\cdot\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)d\delta\otimes\phi_{l}(0)\left(t\cdot\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)d\theta\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot t^{4}\cdot\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}\mathbb{E}\left[\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\right]d\delta drd\rho d\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By Ito's lemma and similar idea in 
+\begin_inset Quotes eld
+\end_inset
+
+caseCalculation.lyx
+\begin_inset Quotes erd
+\end_inset
+
+ of three product expectation, the inner expectation can be written as sum
+ of six terms, which are of the form (first term for instance),
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\int_{0}^{\max(r,\rho,\delta,\theta)}\mathbb{E}\left[d\left(\int_{0}^{\min(s,tr)}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)d\left(\int_{0}^{\min(s,t\rho)}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{\min(s,t\delta)}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{\min(s,t\theta)}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\int_{0}^{\min(tr,t\rho)}\mathbb{E}\left[\frac{1}{(t-s)^{2}}a^{ij}(W_{s})\left(\int_{0}^{\min(s,t\delta)}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{\min(s,t\theta)}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\right]ds
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\frac{1}{t}\cdot\int_{0}^{\min(r,\rho)}\mathbb{E}\left[\frac{1}{(1-z)^{2}}a^{ij}(W_{tz})\left(\int_{0}^{\min(tz,t\delta)}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{\min(tz,t\theta)}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\right]dz
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(i)(A).
+ Expand 
+\begin_inset Formula $a^{ij}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{ij}(0)\cdot t^{5}\cdot{\color{red}\frac{1}{2}\cdot\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}\int_{0}^{\min(r,\rho)}\mathbb{E}\left[\left(\int_{0}^{tz}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{tz}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\left(\int_{0}^{\min(tz,t\delta)}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{\min(tz,t\theta)}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\right]dzd\delta drd\rho d\theta}
+\]
+
+\end_inset
+
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{ij}(0)\cdot\left(\frac{1}{108}\delta_{kq}\delta_{lp}+\frac{1}{108}\delta_{kp}\delta_{lq}+\frac{1}{96}\delta_{kl}\delta_{pq}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(i)(B).
+ Not expand 
+\begin_inset Formula $a^{ij}$
+\end_inset
+
+, and expand 
+\begin_inset Formula $a^{kl}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{t}\cdot\int_{0}^{\min(r,\rho)}\mathbb{E}\left[\frac{1}{(1-z)^{2}}a^{ij}(W_{tz})\left(\int_{0}^{\min(tz,t\delta)}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{\min(tz,t\theta)}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\right]dz
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\frac{1}{t}\cdot\delta_{ij}\cdot\int_{0}^{\min(r,\rho)}\frac{1}{(1-z)^{2}}\mathbb{E}\left[\left(\int_{0}^{\min(tz,t\delta)}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{\min(tz,t\theta)}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\right]dz
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\frac{1}{t}\cdot\delta_{ij}\cdot\int_{0}^{\min(r,\rho)}\frac{1}{(1-z)^{2}}\mathbb{E}\left[\left(\int_{0}^{\min(tz,t\delta,t\theta)}\frac{a^{kl}(W_{u})}{(t-u)^{2}}\right)du\right]dz
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\delta_{ij}\cdot\partial_{pq}^{2}a^{kl}(0)\cdot\frac{1}{2}\cdot\int_{0}^{\min(r,\rho)}\int_{0}^{\min(z,\delta,\theta)}\frac{1}{(1-z)^{2}}\mathbb{E}\left[\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right]d\eta dz
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So we evaluate
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{kl}(0)\cdot t^{4}\cdot{\color{red}\delta_{ij}\cdot\frac{1}{2}\cdot\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}\int_{0}^{\min(r,\rho)}\int_{0}^{\min(z,\delta,\theta)}\frac{1}{(1-z)^{2}}\mathbb{E}\left[\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right]d\eta dzd\delta drd\theta d\rho}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{kl}(0)\cdot\left(\frac{1}{96}\delta_{ij}\delta_{pq}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(ii)(A).
+ Expand 
+\begin_inset Formula $a^{ik}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{ik}(0)\cdot t^{5}\cdot{\color{red}\frac{1}{2}\cdot\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}\int_{0}^{\min(r,\delta)}\mathbb{E}\left[\left(\int_{0}^{\min(tz,t\rho)}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{tz}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{tz}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\left(\int_{0}^{\min(tz,t\theta)}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\right]dzd\delta drd\rho d\theta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{ik}(0)\cdot\left(\frac{1}{240}\delta_{jq}\delta_{lp}+\frac{1}{240}\delta_{jp}\delta_{lq}+\frac{1}{240}\delta_{jl}\delta_{pq}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(ii)(B).
+ Not expand 
+\begin_inset Formula $a^{ik}$
+\end_inset
+
+, and expand 
+\begin_inset Formula $a^{jl}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{jl}(0)\cdot t^{4}\cdot{\color{red}\delta_{ik}\cdot\frac{1}{2}\cdot\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}\int_{0}^{\min(r,\delta)}\int_{0}^{\min(z,\rho,\theta)}\frac{1}{(1-z)^{2}}\mathbb{E}\left[\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right]d\eta dzd\delta drd\rho d\theta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{jl}(0)\cdot\left(\frac{1}{288}\delta_{ik}\delta_{pq}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(iii)(A)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{il}(0)\cdot t^{5}\cdot{\color{red}\frac{1}{2}\cdot\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}\int_{0}^{\min(r,\theta)}\mathbb{E}\left[\left(\int_{0}^{\min(tz,t\rho)}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{\min(tz,t\delta)}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{tz}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{tz}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right]dzd\delta drd\rho d\theta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{il}(0)\cdot\left(\frac{23}{2880}\delta_{jq}\delta_{kp}+\frac{23}{2880}\delta_{jp}\delta_{kq}+\frac{23}{2880}\delta_{jk}\delta_{pq}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(iii)(B)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{jk}(0)\cdot t^{4}\cdot{\color{red}\delta_{il}\cdot\frac{1}{2}\cdot\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}\int_{0}^{\min(r,\theta)}\int_{0}^{\min(z,\rho,\delta)}\frac{1}{(1-z)^{2}}\mathbb{E}\left[\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right]d\eta dzd\delta drd\rho d\theta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{jk}(0)\cdot\left(\frac{1}{144}\delta_{il}\delta_{pq}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(iv)(A)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{jk}(0)\cdot t^{5}\cdot{\color{red}\frac{1}{2}\cdot\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}\int_{0}^{\min(\rho,\delta)}\mathbb{E}\left[\left(\int_{0}^{\min(tz,tr)}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{\min(tz,t\theta)}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\left(\int_{0}^{tz}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{tz}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right]dzd\delta drd\rho d\theta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{jk}(0)\cdot\left(\frac{23}{2880}\delta_{iq}\delta_{lp}+\frac{23}{2880}\delta_{ip}\delta_{lq}+\frac{23}{2880}\delta_{il}\delta_{pq}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(iv)(B)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{il}(0)\cdot t^{4}\cdot{\color{red}\delta_{jk}\cdot\frac{1}{2}\cdot\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}\int_{0}^{\min(\rho,\delta)}\int_{0}^{\min(z,r,\theta)}\frac{1}{(1-z)^{2}}\mathbb{E}\left[\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right]d\eta dzd\delta drd\rho d\theta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{il}(0)\cdot\left(\frac{1}{144}\delta_{jk}\delta_{pq}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(v)(A)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{jl}(0)\cdot t^{5}\cdot{\color{red}\frac{1}{2}\cdot\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}\int_{0}^{\min(\rho,\theta)}\mathbb{E}\left[\left(\int_{0}^{\min(tz,tr)}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{\min(tz,t\delta)}\frac{(\sigma dB)_{u}^{k}}{t-u}\right)\left(\int_{0}^{tz}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{tz}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right]dzd\delta drd\rho d\theta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{jl}(0)\cdot\left(\frac{73}{4320}\delta_{iq}\delta_{kp}+\frac{73}{4320}\delta_{ik}\delta_{kq}+\frac{31}{1440}\delta_{ik}\delta_{pq}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(v)(B)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{ik}(0)\cdot t^{4}\cdot{\color{red}\delta_{jl}\cdot\frac{1}{2}\cdot\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}\int_{0}^{\min(\rho,\theta)}\int_{0}^{\min(z,r,\delta)}\frac{1}{(1-z)^{2}}\mathbb{E}\left[\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right]d\eta dzd\delta drd\rho d\theta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{ik}(0)\cdot\left(\frac{7}{288}\delta_{jl}\delta_{pq}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(vi)(A)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{kl}(0)\cdot t^{5}\cdot{\color{red}\frac{1}{2}\cdot\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}\int_{0}^{\min(\delta,\theta)}\mathbb{E}\left[\left(\int_{0}^{\min(tz,tr)}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{\min(tz,t\rho)}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)\left(\int_{0}^{tz}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{tz}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right]dzd\delta drd\rho d\theta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Mathematica gives,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{kl}(0)\cdot\left(\frac{1}{108}\delta_{iq}\delta_{jp}+\frac{1}{108}\delta_{ip}\delta_{jq}+\frac{1}{96}\delta_{ij}\delta_{pq}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(vi)(B)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{ij}(0)\cdot t^{4}\cdot{\color{red}\delta_{kl}\cdot\frac{1}{2}\cdot\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\int_{0}^{\theta}\int_{0}^{\min(\delta,\theta)}\int_{0}^{\min(z,r,\rho)}\frac{1}{(1-z)^{2}}\mathbb{E}\left[\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right]d\eta dzd\delta drd\rho d\theta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\textcolor{olive}{\phi_{i}(0)\otimes\phi_{j}(0)\otimes\phi_{k}(0)\otimes\phi_{l}(0)\cdot\partial_{pq}^{2}a^{ij}(0)\cdot\left(\frac{1}{96}\delta_{kl}\delta_{pq}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

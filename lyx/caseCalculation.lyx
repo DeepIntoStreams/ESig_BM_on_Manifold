@@ -1,0 +1,2934 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+The four product case and six product case are direct results of Isserlis'
+ theorem.
+ We mainly focus on the other four cases.
+\end_layout
+
+\begin_layout Standard
+
+\size huge
+Two Product Case
+\end_layout
+
+\begin_layout Standard
+We consider the term
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\left(\int_{0}^{ta_{1}}dX_{u}^{i_{1}}\right)\left(\int_{0}^{ta_{2}}dX_{u}^{i_{2}}\right)\right],
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dX_{u}^{i_{1}}=\mu_{1}du+C_{1}\left(\sigma_{i_{1},1}dB_{u}^{1}+\sigma_{i_{1},2}dB_{u}^{2}\right),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dX_{u}^{i_{2}}=\mu_{2}du+C_{2}\left(\sigma_{i_{2},1}dB_{u}^{1}+\sigma_{i_{2},2}dB_{u}^{2}\right),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+for some deterministic 
+\begin_inset Formula $C_{1},C_{2}$
+\end_inset
+
+.
+ In programming, we treat all 
+\begin_inset Formula $\sigma_{ij}$
+\end_inset
+
+ as deterministic, and 
+\begin_inset Formula $a^{ij}:=(\sigma\sigma^{\top})^{ij}=\delta_{ij}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We can take advantage of the 
+\begin_inset Quotes eld
+\end_inset
+
+ItoLemma.m
+\begin_inset Quotes erd
+\end_inset
+
+ package to find the expression of this term, then integrate the drift term
+ to get the symbolic expression of the expectation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Mathematica, the function 
+\series bold
+twoProductF
+\series default
+ is used to do so.
+\end_layout
+
+\begin_layout Standard
+
+\uuline on
+Inputs:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $i$
+\end_inset
+
+: list of indices, for instance 
+\begin_inset Formula $\{i_{1},i_{2}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a$
+\end_inset
+
+: list of the time horizon parameter of each processes, for instance 
+\begin_inset Formula $\{a_{1},a_{2}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+drift: the drift vector 
+\begin_inset Formula $\{\mu_{1},\mu_{2}\}$
+\end_inset
+
+.
+ (However, in fact in all our cases they are 
+\begin_inset Formula $\{0,0\}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+C: the vector of the coefficients in front of the terms 
+\begin_inset Formula $(\sigma dB)_{u}$
+\end_inset
+
+, for instance 
+\begin_inset Formula $\{C_{1},C_{2}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\uuline on
+Outputs: 
+\uuline default
+a 2-list.
+\end_layout
+
+\begin_layout Enumerate
+position 
+\begin_inset Formula $1$
+\end_inset
+
+: full expression of the reseulting term.
+\end_layout
+
+\begin_layout Enumerate
+position 
+\begin_inset Formula $2$
+\end_inset
+
+: the associated Kronecker delta term (which helps the evaluation).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After we find the symbolic expression of the expectation, we also need a
+ function to do the evaluation of the form 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{b_{2}}\int_{0}^{b_{1}}g(\theta_{1},\theta_{2})\cdot\mathbb{E}\left[\left(\int_{0}^{ta_{1}}dX_{u}^{i_{1}}\right)\left(\int_{0}^{ta_{2}}dX_{u}^{i_{2}}\right)\right]d\theta_{1}d\theta_{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Mathematica, the 
+\series bold
+twoProductEval
+\series default
+ does the job.
+\end_layout
+
+\begin_layout Standard
+
+\uuline on
+Inputs:
+\end_layout
+
+\begin_layout Enumerate
+extraCoeff: the extra coefficient 
+\begin_inset Formula $g(\theta_{1},\theta_{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+expression: the symbolic expression of the expectation term derived by twoProduc
+tF.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $b1$
+\end_inset
+
+: the most outside integration.
+ NOTICE that 
+\begin_inset Formula $b1$
+\end_inset
+
+ is of the form of a list.
+ First position is the integrator, and the second and third position is
+ the lower and upper range of the integration.
+ For instance 
+\begin_inset Formula $\{\theta_{2},0,b_{2}\}$
+\end_inset
+
+ means 
+\begin_inset Formula $\int_{0}^{b_{2}}d\theta_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $b2$
+\end_inset
+
+: second layer of integration.
+ Same form as 
+\begin_inset Formula $b1$
+\end_inset
+
+.
+ For instance, 
+\begin_inset Formula $\{\theta_{1},0,b_{1}\}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\uuline on
+Outputs:
+\uuline default
+ the evaluation result.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size huge
+Improved Three Product
+\end_layout
+
+\begin_layout Standard
+We consider
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\left(\int_{0}^{ta_{1}}C_{1}(\sigma dB)_{u}^{i_{1}}\right)\left(\int_{0}^{ta_{2}}C_{2}(\sigma dB)_{u}^{i_{2}}\right)\left(\int_{0}^{ta_{3}}\Xi(u;i_{4})(\sigma dB)_{u}^{i_{3}}\right)\right],
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\Xi(u;i_{4})$
+\end_inset
+
+ is another stochastic integral (or Lebesgue of sotchastic integral) with
+ index 
+\begin_inset Formula $i_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{i}\in\{1,\frac{1}{t-u}\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Denote 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+X_{s}^{i_{1}}:=\int_{0}^{s}C_{1}(\sigma dB)_{u}^{i_{1}},\quad Y_{s}^{i_{2}}:=\int_{0}^{s}C_{2}(\sigma dB)_{u}^{i_{2}},\quad Z_{s}^{i_{3}}:=\int_{0}^{s}\Xi(u;i_{4})(\sigma dB)_{u}^{i_{3}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Denote 
+\begin_inset Formula $\alpha:=\max(a_{1},a_{2},a_{3})$
+\end_inset
+
+ and extend the three processes onto the interval 
+\begin_inset Formula $[0,t\alpha]$
+\end_inset
+
+ so that for any 
+\begin_inset Formula $s\in[0,t\alpha]$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+X_{s}^{i_{1}}=\int_{0}^{s}C_{1}(\sigma dB)_{u}^{i_{1}}\bm{1}_{\{0\leq s\leq ta_{1}\}}+\int_{0}^{ta_{1}}C_{1}(\sigma dB)_{u}^{i_{1}}\bm{1}_{\{ta_{1}\leq s\leq t\alpha\}}=\int_{0}^{\min(s,ta_{1})}C_{1}(\sigma dB)_{u}^{i_{1}}=X_{\min(s,ta_{1})}^{i_{1}},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dX_{s}=C_{1}(\sigma dB)_{u}^{i_{1}}\bm{1}_{\{0\leq s\leq ta_{1}\}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then by Ito's lemma, the term we want to evaluate can be rewritten as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{t\alpha}d(X_{s}^{i_{1}}Y_{s}^{i_{2}}Z_{s}^{i_{3}})\right]=\mathbb{E}\left[\int_{0}^{t\alpha}d\left(X_{\min(s,ta_{1})}^{i_{1}}Y_{\min(s,ta_{2})}^{i_{2}}Z_{\min(s,ta_{3})}^{i_{3}}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\mathbb{E}\left[\int_{0}^{t\alpha}(dX_{\min(s,ta_{1})}^{i_{1}})Y_{\min(s,ta_{2})}^{i_{2}}(dZ_{\min(s,ta_{3})}^{i_{3}})\right]+\mathbb{E}\left[\int_{0}^{t\alpha}X_{\min(s,ta_{1})}^{i_{1}}(dY_{\min(s,ta_{2})}^{i_{2}})(dZ_{\min(s,ta_{3})}^{i_{3}})\right]+\mathbb{E}\left[\int_{0}^{t\alpha}(dX_{\min(s,ta_{1})}^{i_{1}})(dY_{\min(s,ta_{2})}^{i_{2}})Z_{\min(s,ta_{3})}^{i_{3}}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since we will not considering expanding 
+\begin_inset Formula $a$
+\end_inset
+
+in programming, so the last term is 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ Thus we continue with
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\mathbb{E}\left[\int_{0}^{t\alpha}Y_{\min(s,ta_{2})}^{i_{2}}(dX_{\min(s,ta_{1})}^{i_{1}})(dZ_{\min(s,ta_{3})}^{i_{3}})\right]+\mathbb{E}\left[\int_{0}^{t\alpha}X_{\min(s,ta_{1})}^{i_{1}}(dY_{\min(s,ta_{2})}^{i_{2}})(dZ_{\min(s,ta_{3})}^{i_{3}})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\delta_{i_{1},i_{3}}\cdot\mathbb{E}\left[\int_{0}^{\min(ta_{1},ta_{3})}Y_{\min(s,ta_{2})}^{i_{2}}C_{1}\Xi(s;i_{4})ds\right]+\delta_{i_{2},i_{3}}\cdot\mathbb{E}\left[\int_{0}^{\min(ta_{2},ta_{3})}X_{\min(s,ta_{1})}^{i_{1}}C_{2}\Xi(s;i_{4})ds\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Term 1.
+\end_layout
+
+\begin_layout Standard
+Condition 1: 
+\begin_inset Formula $C_{1}==1$
+\end_inset
+
+.
+ Use change of variable 
+\begin_inset Formula $s=tz,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=t\cdot\delta_{i_{1},i_{3}}\cdot\int_{0}^{\min(a_{1},a_{3})}\mathbb{E}\left[Y_{t\min(z,a_{2})}^{i_{2}}\Xi(tz;i_{4})\right]dz.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Condition 2: 
+\begin_inset Formula $C_{1}==\frac{1}{t-u}$
+\end_inset
+
+.
+ Use change of variable 
+\begin_inset Formula $s=tz,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\delta_{i_{1},i_{3}}\cdot\int_{0}^{\min(a_{1},a_{3})}\frac{1}{1-z}\mathbb{E}\left[Y_{t\min(z,a_{2})}^{i_{2}}\Xi(tz;i_{4})\right]dz.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Term 2.
+\end_layout
+
+\begin_layout Standard
+Condition 1: 
+\begin_inset Formula $C_{2}==1$
+\end_inset
+
+.
+ Use change of variable 
+\begin_inset Formula $s=tz,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=t\cdot\delta_{i_{2},i_{3}}\cdot\int_{0}^{\min(a_{2},a_{3})}\mathbb{E}\left[X_{t\min(z,a_{1})}^{i_{1}}\Xi(tz;i_{4})\right]dz
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Condition 2: 
+\begin_inset Formula $C_{2}==\frac{1}{t-u}$
+\end_inset
+
+.
+ Use change of variable 
+\begin_inset Formula $s=tz,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\delta_{i_{2},i_{3}}\cdot\int_{0}^{\min(a_{2},a_{3})}\frac{1}{1-z}\mathbb{E}\left[X_{t\min(z,a_{1})}^{i_{1}}\Xi(tz;i_{4})\right]dz
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notice that in all the conditions, finally we reduce to the case of finding
+ the expression of the expectation of two stochastic process.
+ Hence, we can apply the twoProductF.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+However, there are the cases that 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ is Lebesgue integral of stochastic integral, which means that we need another
+ change of variable.
+ To be clear, for instance, if 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ is of the form 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Xi(tz;i_{4}):=\left(\int_{0}^{tz}\phi_{i_{4}}\left(W_{u}\right)\frac{W_{u}^{i_{4}}}{t-u}du\right)\dot{=}\phi_{i_{4}}(0)\cdot\int_{0}^{tz}\frac{W_{u}^{i_{4}}}{t-u}du,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and we need to expand for another time according to 
+\begin_inset Formula $\frac{W_{tr}^{i_{4}}}{1-r}\dot{=}\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i_{4}}}{t-u}\right)$
+\end_inset
+
+, thus we need another change of variable 
+\begin_inset Formula $u=t\xi$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i_{4}}(0)\cdot\int_{0}^{z}\frac{W_{t\xi}^{i_{4}}}{1-\xi}d\xi=\phi_{i_{4}}(0)\cdot\int_{0}^{z}\left(t\cdot\int_{0}^{t\xi}\frac{(\sigma dB)_{u}^{i_{4}}}{t-u}\right)d\xi.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[Y_{t\min(z,a_{2})}^{i_{2}}\Xi(tz;i_{4})\right]=\phi_{i_{6}}(0)\cdot\int_{0}^{z}\mathbb{E}\left[Y_{t\min(z,a_{2})}^{i_{2}}\left(t\cdot\int_{0}^{t\xi}\frac{(\sigma dB)_{u}^{i_{4}}}{t-u}\right)\right]d\xi.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We should capture this feature as well in the program.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Mathematica, the 
+\series bold
+threeProductFImproved
+\series default
+ does the job.
+ The inputs and outputs are:
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Inputs:
+\end_layout
+
+\begin_layout Enumerate
+XiLebesgue: whether 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ contains Lebesgue integral, True if yes, False if not.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $i$
+\end_inset
+
+: stands for the index list {
+\begin_inset Formula $i_{1},i_{2},i_{3},i_{4}$
+\end_inset
+
+}.
+ In particular, 
+\begin_inset Formula $i_{3}$
+\end_inset
+
+ must be the index of the third special integrator, and the 
+\begin_inset Formula $i_{4}$
+\end_inset
+
+ must be the index of 
+\begin_inset Formula $\Xi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a$
+\end_inset
+
+: stands for the time horizon parameters {
+\begin_inset Formula $a_{1},a_{2},a_{3}$
+\end_inset
+
+}.
+ 
+\end_layout
+
+\begin_layout Enumerate
+drift: stands for the drift terms of the stochastic integrals.
+ They are actually all {0,0,0,0} throughout the document.
+\end_layout
+
+\begin_layout Enumerate
+C: stands for the coefficient term in front of 
+\begin_inset Formula $(\sigma dB)_{u}^{i}$
+\end_inset
+
+.
+ In particular, C[[3]] should be 1 since we treat 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ as special coefficient.
+ And C[[4]] should be the coefficient including all the expansion terms
+ (e.g.
+ 
+\begin_inset Formula $\frac{1}{t-u},t$
+\end_inset
+
+, extra coefficients, etc.).
+ There are two cases.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ does not contain Lebesgue integral, then C[[4]] should be parameterised
+ by 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ (So 
+\begin_inset Formula $z$
+\end_inset
+
+ will be reserved as an internal parameter.)
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ has Lebesgue integral, then C[[4]] should be parameterised by 
+\begin_inset Formula $\xi$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Output:
+\bar default
+ List of two lists.
+ There are two cases.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ does not contain Lebesgue integral, then it is of the form 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+{
+\end_layout
+
+\begin_layout Standard
+{term1 expression, integral range w.r.t.
+ 
+\begin_inset Formula $z$
+\end_inset
+
+, deltaList of term1},
+\end_layout
+
+\begin_layout Standard
+{term2 expression, integral range w.r.t.
+ 
+\begin_inset Formula $z$
+\end_inset
+
+, deltaList of term2}
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ has Lebesgue integral, then it is of the form 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+{
+\end_layout
+
+\begin_layout Standard
+{term1 expression, integral range w.r.t.
+ 
+\begin_inset Formula $z$
+\end_inset
+
+, integral range w.r.t.
+ 
+\begin_inset Formula $\xi$
+\end_inset
+
+, deltaList of term1},
+\end_layout
+
+\begin_layout Standard
+{term2 expression, integral range w.r.t.
+ 
+\begin_inset Formula $z$
+\end_inset
+
+, integral range w.r.t.
+ 
+\begin_inset Formula $\xi$
+\end_inset
+
+, deltaList of term2}
+\end_layout
+
+\begin_layout Standard
+}.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+The evaluation function 
+\series bold
+threeProductFImprovedEval
+\series default
+ follows exactly the form and the logic of 
+\series bold
+twoProductFEval.
+ 
+\series default
+The only difference is that the first input indicates whether 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ contains Lebesgue integral or not, and with some extra layers of integration.
+ All the evaluation functions of the following cases share essentially the
+ same form and logic.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size huge
+Improved Five Product
+\end_layout
+
+\begin_layout Standard
+We consider
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\left(\int_{0}^{ta_{1}}C_{1}(\sigma dB)_{u}^{i_{1}}\right)\left(\int_{0}^{ta_{2}}C_{2}(\sigma dB)_{u}^{i_{2}}\right)\left(\int_{0}^{ta_{3}}C_{3}(\sigma dB)_{u}^{i_{3}}\right)\left(\int_{0}^{ta_{4}}C_{4}(\sigma dB)_{u}^{i_{4}}\right)\left(\int_{0}^{ta_{5}}\Xi(u;i_{6})(\sigma dB)_{u}^{i_{5}}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+s are the diffusion coefficients that takes value of either 
+\begin_inset Formula $1$
+\end_inset
+
+ or 
+\begin_inset Formula $\frac{1}{t-u}$
+\end_inset
+
+.
+ They essentially influence all the change of variable steps.
+ 
+\end_layout
+
+\begin_layout Standard
+Follow the same logic in original Five Product Formula Part, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\text{four terms of form }\mathbb{E}\left[\int_{0}^{t\alpha}Y_{\min(s,ta_{2})}^{i_{2}}Z_{\min(s,ta_{3})}^{i_{3}}P_{\min(s,ta_{4})}^{i_{4}}(dX_{\min(s,ta_{1})}^{i_{1}})(dQ_{\min(s,ta_{5})}^{i_{5}})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++\text{six terms of form }\mathbb{E}\left[\int_{0}^{t\alpha}Z_{\min(s,ta_{3})}^{i_{3}}P_{\min(s,ta_{4})}^{i_{4}}Q_{\min(s,ta_{5})}^{i_{5}}(dX_{\min(s,ta_{1})}^{i_{1}})(dY_{\min(s,ta_{2})}^{i_{2}})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Form 1.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{t\alpha}Y_{\min(s,ta_{2})}^{i_{2}}Z_{\min(s,ta_{3})}^{i_{3}}P_{\min(s,ta_{4})}^{i_{4}}(dX_{\min(s,ta_{1})}^{i_{1}})(dQ_{\min(s,ta_{5})}^{i_{5}})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\mathbb{E}\left[\int_{0}^{t\alpha}Y_{\min(s,ta_{2})}^{i_{2}}Z_{\min(s,ta_{3})}^{i_{3}}P_{\min(s,ta_{4})}^{i_{4}}\left\{ C_{1}\right\} \Xi(s;i_{6})\bm{1}_{\{0\leq s\leq\min(ta_{1},ta_{5})\}}ds\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\delta_{i_{1},i_{5}}\cdot\mathbb{E}\left[\int_{0}^{t\min(a_{1},a_{5})}Y_{\min(s,ta_{2})}^{i_{2}}Z_{\min(s,ta_{3})}^{i_{3}}P_{\min(s,ta_{4})}^{i_{4}}\left\{ C_{1}\right\} \Xi(s;i_{6})ds\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we need to change of variable.
+ This will depend on the value of 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+, which has two possible outcomes.
+\end_layout
+
+\begin_layout Standard
+Condition 1: 
+\begin_inset Formula $C_{1}==1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=t\cdot\delta_{i_{1},i_{5}}\cdot\int_{0}^{\min(a_{1},a_{5})}\mathbb{E}\left[Y_{\min(tv,ta_{2})}^{i_{2}}Z_{\min(tv,ta_{3})}^{i_{3}}P_{\min(tv,ta_{4})}^{i_{4}}\Xi(tv;i_{6})\right]dv
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Condition 2: 
+\begin_inset Formula $C_{1}==\frac{1}{t-u}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\delta_{i_{1},i_{5}}\cdot\int_{0}^{\min(a_{1},a_{5})}\frac{1}{1-v}\mathbb{E}\left[Y_{\min(tv,ta_{2})}^{i_{2}}Z_{\min(tv,ta_{3})}^{i_{3}}P_{\min(tv,ta_{4})}^{i_{4}}\Xi(tv;i_{6})\right]dv
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similarly, we will have the situation that the 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ has another Lesbegue integral.
+ We just need another change of variable on it, using the parameter 
+\begin_inset Formula $\eta$
+\end_inset
+
+.
+ And the expansion should be considered with parameter 
+\begin_inset Formula $\eta$
+\end_inset
+
+ as well.
+\end_layout
+
+\begin_layout Standard
+We don't need to worry about the rest 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+s, since the fourProductF is fully adapted to any different diffusion coefficien
+t because we apply the Isserli's theorem and the twoProductF is also fully
+ adapted to any diffusion coefficients.
+ 
+\end_layout
+
+\begin_layout Standard
+Things are different in Form 2 below, where we must use the Improved Three
+ Product Function.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Form 2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{t\alpha}Z_{\min(s,ta_{3})}^{i_{3}}P_{\min(s,ta_{4})}^{i_{4}}Q_{\min(s,ta_{5})}^{i_{5}}(dX_{\min(s,ta_{1})}^{i_{1}})(dY_{\min(s,ta_{2})}^{i_{2}})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\delta_{i_{1,}i_{2}}\cdot\mathbb{E}\left[\int_{0}^{t\alpha}Z_{\min(s,ta_{3})}^{i_{3}}P_{\min(s,ta_{4})}^{i_{4}}Q_{\min(s,ta_{5})}^{i_{5}}\left\{ C_{1}C_{2}\right\} \bm{1}_{\{0\leq s\leq\min(ta_{1},ta_{2})\}}ds\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Condition 1: 
+\begin_inset Formula $C_{1}C_{2}==1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=t\cdot\delta_{i_{1},i_{2}}\cdot\int_{0}^{\min(a_{1},a_{2})}\mathbb{E}\left[Z_{t\min(v,a_{3})}^{i_{3}}P_{t\min(v,a_{4})}^{i_{4}}Q_{t\min(v,a_{5})}^{i_{5}}\right]dv
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Condition 2: 
+\begin_inset Formula $C_{1}C_{2}==\frac{1}{t-u}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\delta_{i_{1},i_{2}}\cdot\int_{0}^{\min(a_{1},a_{2})}\frac{1}{1-v}\mathbb{E}\left[Z_{t\min(v,a_{3})}^{i_{3}}P_{t\min(v,a_{4})}^{i_{4}}Q_{t\min(v,a_{5})}^{i_{5}}\right]dv
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Condition 3: 
+\begin_inset Formula $C_{1}C_{2}==\frac{1}{(t-u)^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\frac{1}{t}\cdot\delta_{i_{1},i_{2}}\cdot\int_{0}^{\min(a_{1},a_{2})}\frac{1}{(1-v)^{2}}\mathbb{E}\left[Z_{t\min(v,a_{3})}^{i_{3}}P_{t\min(v,a_{4})}^{i_{4}}Q_{t\min(v,a_{5})}^{i_{5}}\right]dv
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notice if 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ in 
+\begin_inset Formula $Q$
+\end_inset
+
+ is has Lebesgue, then the parameter should follow the pattern of 
+\series bold
+threeProductImproved, 
+\series default
+i.e.
+ should be considered with parameter 
+\begin_inset Formula $\xi$
+\end_inset
+
+.
+ And the expansion should also be parameterised by 
+\begin_inset Formula $\xi$
+\end_inset
+
+ as well.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Mathematica, the 
+\series bold
+fiveProductFImprovedForm1
+\series default
+ and 
+\series bold
+fiveProductFImprovedForm2
+\series default
+ does the job.
+ The inputs and outputs are:
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Inputs:
+\end_layout
+
+\begin_layout Enumerate
+XiLebesgue: whether 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ contains Lebesgue integral, True if yes, False if not.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $i$
+\end_inset
+
+: stands for the index list {
+\begin_inset Formula $i_{1},i_{2},i_{3},i_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $i_{5}$
+\end_inset
+
+, 
+\begin_inset Formula $i_{6}$
+\end_inset
+
+}.
+ In particular, 
+\begin_inset Formula $i_{5}$
+\end_inset
+
+ must be the index of the third special integrator, and the 
+\begin_inset Formula $i_{6}$
+\end_inset
+
+ must be the index of 
+\begin_inset Formula $\Xi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a$
+\end_inset
+
+: stands for the time horizon parameters {
+\begin_inset Formula $a_{1},a_{2},a_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{5}$
+\end_inset
+
+}.
+ 
+\end_layout
+
+\begin_layout Enumerate
+drift: stands for the drift terms of the stochastic integrals.
+ They are actually all {0,0,0,0,0} throughout the document.
+\end_layout
+
+\begin_layout Enumerate
+C: stands for the coefficient term in front of 
+\begin_inset Formula $(\sigma dB)_{u}^{i}$
+\end_inset
+
+.
+ In particular, C[[5]] should be 1 since we treat 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ as special coefficient.
+ And C[[6]] should be the coefficient including all the expansion terms
+ (e.g.
+ 
+\begin_inset Formula $\frac{1}{t-u},t$
+\end_inset
+
+, extra coefficients, etc.).
+ There are two cases.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\color magenta
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ does not contain Lebesgue integral, then for form 1 C[[6]] should be parameteri
+sed by 
+\begin_inset Formula $v$
+\end_inset
+
+, and for form 2 C[[6]] should be parameterised by 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ (So 
+\begin_inset Formula $v$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ will be reserved as internal parameters.)
+\end_layout
+
+\begin_layout Enumerate
+
+\color magenta
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ has Lebesgue integral, then for form 1 C[[6]] should be parameterised by
+ 
+\begin_inset Formula $\eta$
+\end_inset
+
+, and for form 2 C[[6]] should be parameterised by 
+\begin_inset Formula $\xi$
+\end_inset
+
+.
+ (So 
+\begin_inset Formula $\eta$
+\end_inset
+
+ and 
+\begin_inset Formula $\xi$
+\end_inset
+
+ will be reserved as internal parameters.)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+fiveProductImprovedFForm1
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Output:
+\bar default
+ For form1, list of four lists.
+ There are two cases.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ does not contain Lebesgue integral, each list is of the form 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+{term expression, integral range w.r.t.
+ 
+\begin_inset Formula $v$
+\end_inset
+
+, deltaList of the term}
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ has Lebesgue integral, then it is of the form 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+{term expression, integral range w.r.t.
+ 
+\begin_inset Formula $v$
+\end_inset
+
+, integral range w.r.t.
+ 
+\begin_inset Formula $\eta$
+\end_inset
+
+, deltaList of the term}
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+fiveProductImprovedFForm2
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Output:
+\bar default
+ It is more complicated.
+ For form2, list of six lists.
+ And each of the list contains two lists, which are the outputs of the form
+ produced by 
+\series bold
+threeProductImproved
+\end_layout
+
+\begin_layout Standard
+There are two cases.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ does not contain Lebesgue integral, each list is of the form 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+{
+\end_layout
+
+\begin_layout Standard
+{term1 expression, integral range w.r.t.
+ 
+\begin_inset Formula $v$
+\end_inset
+
+, integral range w.r.t.
+ 
+\begin_inset Formula $z$
+\end_inset
+
+, deltaList of the term},
+\end_layout
+
+\begin_layout Standard
+{term2 expression, integral range w.r.t.
+ 
+\begin_inset Formula $v$
+\end_inset
+
+, integral range w.r.t.
+ 
+\begin_inset Formula $z$
+\end_inset
+
+, deltaList of the term},
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ has Lebesgue integral, then it is of the form 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+{
+\end_layout
+
+\begin_layout Standard
+{term1 expression, integral range w.r.t.
+ 
+\begin_inset Formula $v$
+\end_inset
+
+, integral range w.r.t.
+ 
+\begin_inset Formula $z$
+\end_inset
+
+, integral w.r.t.
+ 
+\begin_inset Formula $\xi$
+\end_inset
+
+, deltaList of the term},
+\end_layout
+
+\begin_layout Standard
+{term2 expression, integral range w.r.t.
+ 
+\begin_inset Formula $v$
+\end_inset
+
+, integral range w.r.t.
+ 
+\begin_inset Formula $z$
+\end_inset
+
+, integral w.r.t.
+ 
+\begin_inset Formula $\xi$
+\end_inset
+
+, deltaList of the term},
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size huge
+Four Product with Two Expansion in 
+\begin_inset Formula $\Xi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This is the case of the form
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\left(\int_{0}^{ta_{1}}C_{1}(\sigma dB)_{u}^{i_{1}}\right)\left(\int_{0}^{ta_{2}}C_{2}(\sigma dB)_{u}^{i_{2}}\right)\left(\int_{0}^{ta_{3}}C_{3}(\sigma dB)_{u}^{i_{3}}\right)\left(\int_{0}^{ta_{4}}\Xi(u;i_{5},i_{6})(\sigma dB)_{u}^{i_{4}}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where we will have two stochastic integrals in 
+\begin_inset Formula $\Xi$
+\end_inset
+
+.
+ We use the same trick.
+ Denote
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+X_{s}^{i_{1}}:=\int_{0}^{s}C_{1}(\sigma dB)_{u}^{i_{1}},\quad Y_{s}^{i_{2}}:=\int_{0}^{s}C_{2}(\sigma dB)_{u}^{i_{2}},\quad Z_{s}^{i_{3}}:=\int_{0}^{s}C_{3}(\sigma dB)_{u}^{i_{3}},\quad Q_{s}^{i_{4}}:=\int_{0}^{s}\Xi(u;i_{5},i_{6})(\sigma dB)_{u}^{i_{4}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and 
+\begin_inset Formula $\alpha:=\max(a_{1},a_{2},a_{3},a_{4})$
+\end_inset
+
+.
+ Then by Ito, the expectation will be
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\text{three terms of the form }\mathbb{E}\left[\int_{0}^{t\alpha}Y_{\min(s,ta_{2})}^{i_{2}}Z_{\min(s,ta_{3})}^{i_{3}}(dX_{\min(s,ta_{1})}^{i_{1}})(dQ_{\min(s,ta_{4})}^{i_{4}})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++\text{three terms of the form }\mathbb{E}\left[\int_{0}^{t\alpha}Z_{\min(s,ta_{3})}^{i_{3}}Q_{\min(s,ta_{4})}^{i_{4}}(dX_{\min(s,ta_{1})}^{i_{1}})(dY_{\min(s,ta_{2})}^{i_{2}})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Form 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\delta_{i_{1},i_{4}}\cdot\mathbb{E}\left[\int_{0}^{t\alpha}Y_{\min(s,ta_{2})}^{i_{2}}Z_{\min(s,ta_{3})}^{i_{3}}\{C_{1}\}\Xi(s;i_{5},i_{6})\bm{1}_{\{0\leq s\leq\min(ta_{1},ta_{4})\}}ds\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Condition 1: If 
+\begin_inset Formula $C_{1}=1$
+\end_inset
+
+.
+ Change of variable 
+\begin_inset Formula $s=tv$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+=\delta_{i_{1},i_{4}}\cdot t\cdot\int_{0}^{\min(a_{1},a_{4})}\mathbb{E}\left[Y_{t\min(v,a_{2})}^{i_{2}}Z_{t\min(v,a_{3})}^{i_{3}}\Xi(tv;i_{5},i_{6})\right]dv
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Condition 2: If 
+\begin_inset Formula $C_{1}=\frac{1}{t-u}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\delta_{i_{1},i_{4}}\cdot\int_{0}^{\min(a_{1},a_{4})}\frac{1}{1-v}\mathbb{E}\left[Y_{t\min(v,a_{2})}^{i_{2}}Z_{t\min(v,a_{3})}^{i_{3}}\Xi(tv;i_{5},i_{6})\right]dv
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here, after expansion 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ may be Lebesgue of two stochastic integrals, i.e.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Xi(tv;i_{5},i_{6})=\int_{0}^{v}g(t,\eta)P_{t\eta}^{i_{5}}L_{t\eta}^{i_{6}}d\eta,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+or Lebesgue of one integral, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Xi(tv;i_{5},i_{6})=\int_{0}^{v}g(t,\eta,v)P_{t\eta}^{i_{5}}L_{tv}^{i_{6}}d\eta,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+or product of two stochastic integrals directly, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Xi(tv;i_{5},i_{6})=g(t,v)P_{tv}^{i_{5}}L_{tv}^{i_{6}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $P$
+\end_inset
+
+ and 
+\begin_inset Formula $L$
+\end_inset
+
+ are two stochastic integrals, and 
+\begin_inset Formula $g(t,\cdot)$
+\end_inset
+
+ is the extra coefficient depending on 
+\begin_inset Formula $t$
+\end_inset
+
+ and the change of variable parameter.
+ 
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ is Lebesgue, 
+\end_layout
+
+\begin_layout Standard
+Condition 1:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\textcolor{red}{\delta_{i_{1},i_{4}}\cdot t\cdot\int_{0}^{\min(a_{1},a_{4})}\int_{0}^{v}g(t,\eta,v)\mathbb{E}\left[Y_{t\min(v,a_{2})}^{i_{2}}Z_{t\min(v,a_{3})}^{i_{3}}P_{t\{\eta,v\}}^{i_{5}}L_{t\{\eta,v\}}^{i_{6}}\right]d\eta dv}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Condtion 2:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\textcolor{red}{\delta_{i_{1},i_{4}}\cdot\int_{0}^{\min(a_{1},a_{4})}\frac{1}{1-v}\int_{0}^{v}g(t,\eta,v)\mathbb{E}\left[Y_{t\min(v,a_{2})}^{i_{2}}Z_{t\min(v,a_{3})}^{i_{3}}P_{t\{\eta,v\}}^{i_{5}}L_{t\{\eta,v\}}^{i_{6}}\right]d\eta dv}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where we can apply the original fourProductF to the expectation inside.
+ Other terms follow the same logic.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ is not Lebesgue, 
+\end_layout
+
+\begin_layout Standard
+Condition 1:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\textcolor{red}{\delta_{i_{1},i_{4}}\cdot t\cdot\int_{0}^{\min(a_{1},a_{4})}g(t,v)\mathbb{E}\left[Y_{t\min(v,a_{2})}^{i_{2}}Z_{t\min(v,a_{3})}^{i_{3}}P_{tv}^{i_{5}}L_{tv}^{i_{6}}\right]dv}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Condition 2: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\textcolor{red}{\delta_{i_{1},i_{4}}\int_{0}^{\min(a_{1},a_{4})}\frac{1}{1-v}g(t,v)\mathbb{E}\left[Y_{t\min(v,a_{2})}^{i_{2}}Z_{t\min(v,a_{3})}^{i_{3}}P_{tv}^{i_{5}}L_{tv}^{i_{6}}\right]dv}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where we can apply the original fourProductF to the expectation inside.
+ Other terms follow the same logic.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Form 2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left[\int_{0}^{t\alpha}Z_{\min(s,ta_{3})}^{i_{3}}Q_{\min(s,ta_{4})}^{i_{4}}(dX_{\min(s,ta_{1})}^{i_{1}})(dY_{\min(s,ta_{2})}^{i_{2}})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\delta_{i_{1},i_{2}}\cdot\mathbb{E}\left[\int_{0}^{t\alpha}Z_{\min(s,ta_{3})}^{i_{3}}Q_{\min(s,ta_{4})}^{i_{4}}\{C_{1}C_{2}\}\bm{1}_{\{0\leq s\leq\min(ta_{1},ta_{2})\}}ds\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\delta_{i_{1},i_{2}}\cdot\int_{0}^{\min(ta_{1},ta_{2})}\mathbb{E}\left[Z_{\min(s,ta_{3})}^{i_{3}}Q_{\min(s,ta_{4})}^{i_{4}}\{C_{1}C_{2}\}\right]ds
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ is not Lebesgue, 
+\end_layout
+
+\begin_layout Standard
+Condition 1: 
+\begin_inset Formula $C_{1}C_{2}=1$
+\end_inset
+
+.
+ Change of variable, 
+\begin_inset Formula $s=vt$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\delta_{i_{1},i_{2}}\cdot t\cdot\int_{0}^{\min(a_{1},a_{2})}\mathbb{E}\left[Z_{t\min(v,a_{3})}^{i_{3}}Q_{t\min(v,a_{4})}^{i_{4}}\right]dv
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\delta_{i_{1},i_{2}}\cdot\delta_{i_{3},i_{4}}\cdot t\cdot\int_{0}^{\min(a_{1},a_{2})}\int_{0}^{t\min(v,a_{3},a_{4})}C_{3}\left(\mathbb{E}\left[\Xi(u)\right]\right)dudv
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Subcondition 1: 
+\begin_inset Formula $C_{3}=1$
+\end_inset
+
+.
+ Change of variable, 
+\begin_inset Formula $u=t\eta$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}=\delta_{i_{1},i_{2}}\cdot\delta_{i_{3},i_{4}}\cdot t^{2}\cdot\int_{0}^{\min(a_{1},a_{2})}\int_{0}^{\min(v,a_{3},a_{4})}\mathbb{E}\left[\Xi(t\eta)\right]d\eta dv}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Subcondition 2: 
+\begin_inset Formula $C_{3}=\frac{1}{t-u}$
+\end_inset
+
+.
+ Change of variable, 
+\begin_inset Formula $u=t\eta$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}=\delta_{i_{1},i_{2}}\cdot\delta_{i_{3},i_{4}}\cdot t\cdot\int_{0}^{\min(a_{1},a_{2})}\int_{0}^{\min(v,a_{3},a_{4})}\frac{1}{1-\eta}\mathbb{E}\left[\Xi(t\eta)\right]d\eta dv}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Condition 2: 
+\begin_inset Formula $C_{1}C_{2}=\frac{1}{t-s}$
+\end_inset
+
+.
+ Change of variable, 
+\begin_inset Formula $s=vt$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\delta_{i_{1},i_{2}}\cdot\int_{0}^{\min(a_{1},a_{2})}\frac{1}{1-v}\mathbb{E}\left[Z_{t\min(v,a_{3})}^{i_{3}}Q_{t\min(v,a_{4})}^{i_{4}}\right]dv
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\delta_{i_{1},i_{2}}\cdot\delta_{i_{3},i_{4}}\cdot\int_{0}^{\min(a_{1},a_{2})}\int_{0}^{t\min(v,a_{3},a_{4})}\frac{1}{1-v}C_{3}\left(\mathbb{E}\left[\Xi(u)\right]\right)dudv
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Subcondition 1: 
+\begin_inset Formula $C_{3}=1$
+\end_inset
+
+.
+ Change of variable, 
+\begin_inset Formula $u=t\eta$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}=\delta_{i_{1},i_{2}}\cdot\delta_{i_{3},i_{4}}\cdot t\cdot\int_{0}^{\min(a_{1},a_{2})}\int_{0}^{\min(v,a_{3},a_{4})}\frac{1}{1-v}\mathbb{E}\left[\Xi(t\eta)\right]d\eta dv}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Subcondition 2: 
+\begin_inset Formula $C_{3}=\frac{1}{t-u}$
+\end_inset
+
+.
+ Change of variable, 
+\begin_inset Formula $u=t\eta$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}=\delta_{i_{1},i_{2}}\cdot\delta_{i_{3},i_{4}}\cdot\int_{0}^{\min(a_{1},a_{2})}\int_{0}^{\min(v,a_{3},a_{4})}\frac{1}{(1-v)(1-\eta)}\mathbb{E}\left[\Xi(t\eta)\right]d\eta dv}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Condition 3: 
+\begin_inset Formula $C_{1}C_{2}=\frac{1}{(t-s)^{2}}$
+\end_inset
+
+.
+ Change of variable, 
+\begin_inset Formula $s=vt$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\delta_{i_{1},i_{2}}\cdot\frac{1}{t}\cdot\int_{0}^{\min(a_{1},a_{2})}\frac{1}{(1-v)^{2}}\mathbb{E}\left[Z_{t\min(v,a_{3})}^{i_{3}}Q_{t\min(v,a_{4})}^{i_{4}}\right]dv
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Subcondition 1: 
+\begin_inset Formula $C_{3}=1$
+\end_inset
+
+.
+ Change of variable, 
+\begin_inset Formula $u=t\eta$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}=\delta_{i_{1},i_{2}}\cdot\delta_{i_{3},i_{4}}\cdot\int_{0}^{\min(a_{1},a_{2})}\int_{0}^{\min(v,a_{3},a_{4})}\frac{1}{(1-v)^{2}}\mathbb{E}\left[\Xi(t\eta)\right]d\eta dv}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Subcondition 2: 
+\begin_inset Formula $C_{3}=\frac{1}{t-u}$
+\end_inset
+
+.
+ Change of variable, 
+\begin_inset Formula $u=t\eta$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}=\delta_{i_{1},i_{2}}\cdot\delta_{i_{3},i_{4}}\cdot\frac{1}{t}\cdot\int_{0}^{\min(a_{1},a_{2})}\int_{0}^{\min(v,a_{3},a_{4})}\frac{1}{(1-v)^{2}}\frac{1}{1-\eta}\mathbb{E}\left[\Xi(t\eta)\right]d\eta dv}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ is Lebesgue, i.e.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Xi(t\eta;i_{5},i_{6},a_{5},a_{6})=\int_{0}^{\eta}g(t,\delta)P_{ta_{5}}^{i_{5}}L_{ta_{6}}^{i_{6}}d\delta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+then every term will have another layer of integral w.r.t.
+ 
+\begin_inset Formula $\delta$
+\end_inset
+
+.
+ For instance, if 
+\begin_inset Formula $C_{1}C_{2}=\frac{1}{(t-s)^{2}}$
+\end_inset
+
+ and 
+\begin_inset Formula $C_{3}=\frac{1}{t-u}$
+\end_inset
+
+, then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\textcolor{red}{\delta_{i_{1},i_{2}}\cdot\delta_{i_{3},i_{4}}\cdot\frac{1}{t}\cdot\int_{0}^{\min(a_{1},a_{2})}\int_{0}^{\min(v,a_{3},a_{4})}\int_{0}^{\eta}\frac{1}{(1-v)^{2}(1-\eta)}\cdot g(t,\delta)\cdot\mathbb{E}\left[P_{t\{\delta,\eta\}}^{i_{5}}L_{t\{\delta,\eta\}}^{i_{6}}\right]d\delta d\eta dv}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where we can apply the twoProductF to the expectation inside.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Mathematica, the 
+\series bold
+fourProductExpFForm1 
+\series default
+and 
+\series bold
+fourProductExpFForm2
+\series default
+ does the job.
+ The inputs and outputs are:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+fourProductExpFForm1
+\end_layout
+
+\begin_layout Standard
+
+\uuline on
+Inputs:
+\end_layout
+
+\begin_layout Enumerate
+XiLebesgue: whether 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ contains Lebesgue integral, True if yes, False if not.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $i$
+\end_inset
+
+: stands for the index list {
+\begin_inset Formula $i_{1},i_{2},i_{3},i_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $i_{5}$
+\end_inset
+
+, 
+\begin_inset Formula $i_{6}$
+\end_inset
+
+}.
+ In particular, 
+\begin_inset Formula $i_{4}$
+\end_inset
+
+ must be the index of the fourth special integrator, and the 
+\begin_inset Formula $i_{5,}i_{6}$
+\end_inset
+
+ must be the index of 
+\begin_inset Formula $\Xi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a$
+\end_inset
+
+: stands for the time horizon parameters {
+\begin_inset Formula $a_{1},a_{2},a_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{5}$
+\end_inset
+
+,
+\begin_inset Formula $a_{6}$
+\end_inset
+
+}.
+ There are two cases:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\color magenta
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ does not contain Lebesgue integral, then 
+\begin_inset Formula $a_{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{6}$
+\end_inset
+
+ should be 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\color magenta
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ has Lebesgue integral, then then 
+\begin_inset Formula $a_{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{6}$
+\end_inset
+
+ should be values form {
+\begin_inset Formula $v$
+\end_inset
+
+,
+\begin_inset Formula $\eta$
+\end_inset
+
+} depending on the expasion.
+ (Since in the derivation above, we parameterised the change of variable
+ using 
+\begin_inset Formula $v$
+\end_inset
+
+ and 
+\begin_inset Formula $\eta$
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+drift: stands for the drift terms of the stochastic integrals.
+ They are actually all {0,0,0,0,0} throughout the document.
+\end_layout
+
+\begin_layout Enumerate
+C: stands for the coefficient term in front of 
+\begin_inset Formula $(\sigma dB)_{u}^{i}$
+\end_inset
+
+.
+ In particular, C[[4]] must be 1 since we treat 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ as special coefficient.
+ 
+\end_layout
+
+\begin_layout Enumerate
+XiCoeff: the extra coefficient from the expasion in 
+\begin_inset Formula $\Xi$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Output:
+\bar default
+ list of three lists.
+ There are two cases.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ does not contain Lebesgue integral, then each list is of the form 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+{term expression, integral range w.r.t.
+ 
+\begin_inset Formula $v$
+\end_inset
+
+, deltaList of the term}
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ has Lebesgue integral, then each list is of the form 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+{term expression, integral range w.r.t.
+ 
+\begin_inset Formula $v$
+\end_inset
+
+, integral range w.r.t.
+ 
+\begin_inset Formula $\eta$
+\end_inset
+
+, deltaList of the term}
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+fourProductExpFForm2
+\end_layout
+
+\begin_layout Standard
+
+\uuline on
+Inputs:
+\end_layout
+
+\begin_layout Enumerate
+XiLebesgue: whether 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ contains Lebesgue integral, True if yes, False if not.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $i$
+\end_inset
+
+: stands for the index list {
+\begin_inset Formula $i_{1},i_{2},i_{3},i_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $i_{5}$
+\end_inset
+
+, 
+\begin_inset Formula $i_{6}$
+\end_inset
+
+}.
+ In particular, 
+\begin_inset Formula $i_{4}$
+\end_inset
+
+ must be the index of the fourth special integrator, and the 
+\begin_inset Formula $i_{5,}i_{6}$
+\end_inset
+
+ must be the index of 
+\begin_inset Formula $\Xi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a$
+\end_inset
+
+: stands for the time horizon parameters {
+\begin_inset Formula $a_{1},a_{2},a_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{5}$
+\end_inset
+
+,
+\begin_inset Formula $a_{6}$
+\end_inset
+
+}.
+ There are two cases:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\color magenta
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ does not contain Lebesgue integral, then 
+\begin_inset Formula $a_{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{6}$
+\end_inset
+
+ should be 
+\begin_inset Formula $\eta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\color magenta
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ has Lebesgue integral, then then 
+\begin_inset Formula $a_{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{6}$
+\end_inset
+
+ should be values form {
+\begin_inset Formula $\eta$
+\end_inset
+
+, 
+\begin_inset Formula $\delta$
+\end_inset
+
+} depending on the expasion.
+ (Since in the derivation above we parameterised the change of variable
+ using 
+\begin_inset Formula $\eta$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta$
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+drift: stands for the drift terms of the stochastic integrals.
+ They are actually all {0,0,0,0,0} throughout the document.
+\end_layout
+
+\begin_layout Enumerate
+C: stands for the coefficient term in front of 
+\begin_inset Formula $(\sigma dB)_{u}^{i}$
+\end_inset
+
+.
+ In particular, C[[4]] must be 1 since we treat 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ as special coefficient.
+ 
+\end_layout
+
+\begin_layout Enumerate
+XiCoeff: the extra coefficient from the expasion in 
+\begin_inset Formula $\Xi$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Output:
+\bar default
+ list of three lists.
+ There are two cases.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ does not contain Lebesgue integral, then each list is of the form 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+{
+\end_layout
+
+\begin_layout Standard
+term expression,
+\end_layout
+
+\begin_layout Standard
+integral range w.r.t.
+ 
+\begin_inset Formula $v$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+integral range w.r.t.
+ 
+\begin_inset Formula $\eta$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+deltaList of the expression
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\Xi$
+\end_inset
+
+ has Lebesgue integral, then each list is of the form 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+{
+\end_layout
+
+\begin_layout Standard
+term expression, 
+\end_layout
+
+\begin_layout Standard
+integral range w.r.t.
+ 
+\begin_inset Formula $v$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+integral range w.r.t.
+ 
+\begin_inset Formula $\eta$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+integral range w.r.t.
+ 
+\begin_inset Formula $\delta$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+deltaList of the term
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
