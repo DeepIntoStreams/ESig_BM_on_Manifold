@@ -1,1 +1,1 @@
-# Expected signature of Brownian motion on a Riemannian Manifold 
+# Expected signature on a Riemannian Manifold 
