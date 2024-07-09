@@ -1,4 +1,4 @@
-# tpower3_coefficient_calculation
+# Expected Signature on a Riemannian Manifold and Its Geometric Implications
 This is the code repository of the paper entitled "Expected Signature on a Riemannian Manifold and Its Geometric Implications". In particular, it contains the code that calculates the coefficient of $t^3$ in Section 5.4 of the paper. The codes are implemented in Mathematica (version 14.0.0.0).
 
 ## Overview
