@@ -1,0 +1,4353 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{graphicx}
+\usepackage{float}
+
+\date{}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+theorems-sec
+eqs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3.5cm
+\rightmargin 3.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Checking Calculations for Degree 
+\begin_inset Formula $2.5$
+\end_inset
+
+ Case
+\end_layout
+
+\begin_layout Standard
+Notation 1: 
+\begin_inset Formula 
+\[
+\psi=\phi_{j}\bar{b}^{j}+\frac{1}{2}\partial_{j}\phi_{j},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{i}\psi=\phi_{j}\partial_{i}\bar{b}^{j}+\frac{1}{2}\partial_{ij}^{2}\phi_{j}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notation 2:
+\begin_inset Formula 
+\[
+Q^{i}(s)\triangleq\int_{0}^{s}\phi_{i}(X_{u})(\sigma dB)_{u}^{i},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G^{i}(s)\triangleq t\int_{0}^{s}\frac{(\sigma dB)_{u}^{i}}{t-u},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H^{i}(s)\triangleq\int_{0}^{s}(\sigma dB)_{u}^{i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The expansion: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}(X_{tr})=\phi_{i}(0)+\left(\partial_{p}\phi_{i}(0)(1-r)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\right)+\left(\frac{1}{2}\partial_{pq}^{2}\phi_{i}(0)(1-r)^{2}\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right)+\ldots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JI;II)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target: 
+\begin_inset Formula 
+\[
+-t\int_{0}^{1}\left(\int_{0}^{\rho}\psi(X_{tr})dr\right)\otimes\phi_{j}(X_{t\rho})\frac{X_{t\rho}^{j}}{1-\rho}d\rho\otimes\int_{0}^{1}\left(\int_{0}^{\theta}\phi_{k}(X_{t\delta})\frac{X_{t\delta}^{k}}{1-\delta}d\delta\right)\otimes\phi_{l}(X_{t\theta})\frac{X_{t\theta}^{l}}{1-\theta}d\theta.
+\]
+
+\end_inset
+
+Possibilities: 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Expand 
+\begin_inset Formula $\phi_{j}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iii) Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iv) Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \partial_{i}\psi\otimes\phi_{j}\otimes\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ \left(-t\int_{0}^{1}\left(\int_{0}^{\rho}(1-r)G_{t}^{i}(tr)dr\right)G_{t}^{j}(t\rho)d\rho\int_{0}^{1}\left(\int_{0}^{\theta}G_{t}^{k}(t\delta)d\delta\right)G_{t}^{l}(t\theta)d\theta\right).
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{i}\psi\otimes\phi_{j}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{25}{432}\delta^{il}\delta^{jk}-\frac{55}{432}\delta^{ik}\delta^{jl}-\frac{1}{12}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{j}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \psi\otimes\partial_{i}\phi_{j}\otimes\phi_{k}\otimes\phi_{l}\\
+ & \ \ \ \left(-t\int_{0}^{1}\rho(1-\rho)G_{t}^{i}(t\rho)G_{t}^{j}(t\rho)d\rho\int_{0<\delta<\theta<1}G_{t}^{k}(t\delta)G_{t}^{l}(t\theta)d\delta d\theta\right).
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\partial_{i}\phi_{j}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{19}{216}\delta^{il}\delta^{jk}-\frac{19}{216}\delta^{ik}\delta^{jl}-\frac{1}{6}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \psi\otimes\phi_{j}\otimes\partial_{i}\phi_{k}\otimes\phi_{l}\\
+ & \ \ \ \left(-t\int_{0}^{1}\rho G_{t}^{j}(t\rho)d\rho\int_{0<\delta<\theta<1}(1-\delta)G_{t}^{i}(t\delta)G_{t}^{k}(t\delta)G_{t}^{l}(t\theta)d\delta d\theta\right).
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\phi_{j}\otimes\partial_{i}\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{7}{72}\delta^{il}\delta^{jk}-\frac{35}{144}\delta^{ik}\delta^{jl}-\frac{7}{72}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \psi\otimes\phi_{j}\otimes\phi_{k}\otimes\partial_{i}\phi_{l}\\
+ & \ \ \ \left(-t\int_{0}^{1}\rho G_{t}^{j}(t\rho)d\rho\int_{0<\delta<\theta<1}(1-\theta)G_{t}^{k}(t\delta)G_{t}^{i}(t\theta)G_{t}^{l}(t\theta)d\delta d\theta\right).
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\phi_{j}\otimes\phi_{k}\otimes\partial_{i}\phi_{l}\times t^{3}{\color{red}\left(-\frac{19}{144}\delta^{il}\delta^{jk}-\frac{1}{12}\delta^{ik}\delta^{jl}-\frac{1}{12}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm IJ;II)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target: 
+\begin_inset Formula 
+\[
+-t\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(X_{tr})\frac{X_{tr}^{i}}{1-r}dr\right)\psi(X_{t\rho})d\rho\otimes\int_{0}^{1}\left(\int_{0}^{\theta}\phi_{k}(X_{t\delta})\frac{X_{t\delta}^{k}}{1-\delta}d\delta\right)\otimes\phi_{l}(X_{t\theta})\frac{X_{t\theta}^{l}}{1-\theta}d\theta.
+\]
+
+\end_inset
+
+Possibilities:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iii) Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iv) Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ \left(-t\int_{0}^{1}\left(\int_{0}^{\rho}(1-r)G_{t}^{j}(tr)G_{t}^{i}(tr)dr\right)d\rho\int_{0}^{1}\left(\int_{0}^{\theta}G_{t}^{k}(t\delta)d\delta\right)G_{t}^{l}(t\theta)d\theta\right).
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{27}\delta^{il}\delta^{jk}-\frac{1}{27}\delta^{ik}\delta^{jl}-\frac{1}{12}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ \left(-t\int_{0}^{1}\left(\int_{0}^{\rho}G_{t}^{i}(tr)dr\right)(1-\rho)G_{t}^{j}(t\rho)d\rho\int_{0}^{1}\left(\int_{0}^{\theta}G_{t}^{k}(t\delta)d\delta\right)G_{t}^{l}(t\theta)d\theta\right).
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{11}{432}\delta^{il}\delta^{jk}-\frac{17}{432}\delta^{ik}\delta^{jl}-\frac{1}{24}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ \left(-t\int_{0}^{1}\left(\int_{0}^{\rho}G_{t}^{i}(tr)dr\right)d\rho\int_{0}^{1}\left(\int_{0}^{\theta}(1-\delta)G_{t}^{j}(t\delta)G_{t}^{k}(t\delta)d\delta\right)G_{t}^{l}(t\theta)d\theta\right).
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{16}\delta^{il}\delta^{jk}-\frac{1}{24}\delta^{ik}\delta^{jl}-\frac{1}{24}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times\\
+ & \ \ \ \left(-t\int_{0}^{1}\left(\int_{0}^{\rho}G_{t}^{i}(tr)dr\right)d\rho\int_{0}^{1}\left(\int_{0}^{\theta}G_{t}^{k}(t\delta)d\delta\right)(1-\theta)G_{t}^{j}(t\theta)G_{t}^{l}(t\theta)d\theta\right).
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{36}\delta^{il}\delta^{jk}-\frac{1}{16}\delta^{ik}\delta^{jl}-\frac{1}{36}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JK;II)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\begin_inset Formula 
+\[
+\int_{0}^{t}\Xi_{i}(v)(\sigma dB)_{v}^{i}\otimes\int_{0}^{1}\left(\int_{0}^{\theta}\phi_{k}(X_{t\delta})\frac{X_{t\delta}^{k}}{1-\delta}d\delta\right)\otimes\phi_{l}(X_{t\theta})\frac{X_{t\theta}^{l}}{1-\theta}d\theta.
+\]
+
+\end_inset
+
+Here 
+\begin_inset Formula 
+\[
+\Xi_{i}(v)\triangleq\left(\int_{0}^{v}\psi(X_{u})du\right)\otimes\phi_{i}(W_{v})
+\]
+
+\end_inset
+
+Possibilities:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iii) Freeze both.
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \psi\otimes\phi_{i}\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ \int_{0}^{1}\left(\int_{0}^{t\theta}v(\sigma dB)_{v}^{i}\right)\left(\int_{0}^{\theta}(1-\delta)G_{t}^{j}(t\delta)G_{t}^{k}(t\delta)d\delta\right)G_{t}^{l}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\color blue
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\phi_{i}\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{13}{72}\delta^{il}\delta^{jk}+\frac{1}{18}\delta^{ik}\delta^{jl}+\frac{1}{18}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \psi\otimes\phi_{i}\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times\\
+ & \ \ \ \int_{0}^{1}\left(\int_{0}^{t\theta}v(\sigma dB)_{v}^{i}\right)\left(\int_{0}^{\theta}G_{t}^{k}(t\delta)d\delta\right)(1-\theta)G_{t}^{j}(t\theta)G_{t}^{l}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{18}\delta^{il}\delta^{jk}+\frac{5}{72}\delta^{ik}\delta^{jl}+\frac{1}{18}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Freeze both 
+\end_layout
+
+\begin_layout Standard
+The integral is equivalent to 
+\begin_inset Formula 
+\[
+t^{2}\int_{0<\delta<\theta<1}d\delta d\theta\left(\int_{0}^{t\theta}\Xi_{i}(v)(\sigma dB)_{v}^{i}\right)\left(\int_{0}^{t\theta}{\bf 1}_{[0,t\delta]}(v)\frac{(\sigma dB)_{v}^{k}}{t-v}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{v}^{l}}{t-v}\right).
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula 
+\[
+W_{s}\triangleq\int_{0}^{s}\Xi_{i}(v)(\sigma dB)_{v}^{i},\ Y_{s}\triangleq\int_{0}^{s}{\bf 1}_{[0,t\delta]}(v)\frac{(\sigma dB)_{v}^{k}}{t-v},\ Z_{s}\triangleq\int_{0}^{s}\frac{(\sigma dB)_{v}^{l}}{t-v}.
+\]
+
+\end_inset
+
+The 
+\begin_inset Formula $WdYdZ$
+\end_inset
+
+ term produces zero expectation.
+ We only need to consider 
+\begin_inset Formula $YdWdZ$
+\end_inset
+
+ and 
+\begin_inset Formula $WdXdY$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+The 
+\begin_inset Formula $WdXdZ$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+We get 
+\begin_inset Formula 
+\[
+\int_{0}^{t\theta}\left(\int_{0}^{s}{\bf 1}_{[0,t\delta]}(v)\frac{(\sigma dB)_{v}^{k}}{t-v}\right)\frac{\Xi_{i}(s)}{t-s}ds\times\delta^{il}=t^{-1}\int_{0}^{\theta}G_{t}^{k}(t(\eta\wedge\delta))\frac{\Xi_{i}(t\eta)}{1-\eta}d\eta\times\delta^{il}.
+\]
+
+\end_inset
+
+Recall that 
+\begin_inset Formula 
+\begin{align*}
+\Xi_{i}(t\eta) & =t\int_{0}^{\eta}\psi(X_{tr})dr\otimes\phi_{i}(X_{t\eta})\\
+ & \doteq t\partial_{j}\psi\otimes\phi_{i}\int_{0}^{\eta}(1-r)G_{t}^{j}(tr)dr+t\psi\otimes\partial_{j}\phi_{i}\eta(1-\eta)G_{t}^{j}(t\eta).
+\end{align*}
+
+\end_inset
+
+The new target for this case thus becomes:
+\begin_inset Formula 
+\begin{align*}
+ & \partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\delta^{il}\times t^{2}\int_{0<\delta<\theta<1}d\delta d\theta\int_{0}^{\theta}d\eta G_{t}^{k}(t(\eta\wedge\delta))\frac{1}{1-\eta}\int_{0}^{\eta}(1-r)G_{t}^{j}(tr)dr\\
+ & \ \ \ +\psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\delta^{il}\times t^{2}\int_{0<\delta<\theta<1}d\delta d\theta\int_{0}^{\theta}\eta G_{t}^{k}(t(\eta\wedge\delta))G_{t}^{j}(t\eta)d\eta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{13}{144}\delta^{il}\delta^{jk}\right)}+\psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{7}{72}\delta^{il}\delta^{jk}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The 
+\begin_inset Formula $ZdWdY$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+We get
+\begin_inset Formula 
+\[
+\int_{0}^{t\theta}\left(\int_{0}^{s}\frac{(\sigma dB)_{v}^{l}}{t-v}\right){\bf 1}_{[0,t\delta]}(s)\frac{\Xi_{i}(s)}{t-s}ds\times\delta^{ik}=t^{-1}\int_{0}^{\theta\wedge\delta}G_{t}^{l}(t\eta)\frac{\Xi_{i}(t\eta)}{1-\eta}d\eta\times\delta^{ik}.
+\]
+
+\end_inset
+
+The new target for this case thus becomes:
+\begin_inset Formula 
+\begin{align*}
+ & \partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\delta^{ik}\times t^{2}\int_{0<\delta<\theta<1}d\delta d\theta\int_{0}^{\theta\wedge\delta}d\eta G_{t}^{l}(t\eta)\frac{1}{1-\eta}\int_{0}^{\eta}(1-r)G_{t}^{j}(tr)dr\\
+ & \ \ \ +\psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\delta^{ik}\times t^{2}\int_{0<\delta<\theta<1}d\delta d\theta\int_{0}^{\theta\wedge\delta}\eta G_{t}^{l}(t\eta)G_{t}^{j}(t\eta)d\eta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{48}\delta^{ik}\delta^{jl}\right)}+\psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{24}\delta^{ik}\delta^{jl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm KJ;II)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+t\int_{0}^{1}\left(\int_{0}^{t\rho}\phi_{i}(X_{u})(\sigma dB)_{u}^{i}\right)\otimes\psi(X_{t\rho})d\rho\otimes\int_{0}^{1}\left(\int_{0}^{\theta}\phi_{k}(X_{t\delta})\frac{X_{t\delta}^{k}}{1-\delta}d\delta\right)\otimes\phi_{l}(X_{t\theta})\frac{X_{t\theta}^{l}}{1-\theta}d\theta.
+\]
+
+\end_inset
+
+Possibilities: 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iii) Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iv) Freeze all.
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}(1-\rho)H^{i}(t\rho)G_{t}^{j}(t\rho)d\rho\int_{0}^{1}\left(\int_{0}^{\theta}G_{t}^{k}(t\delta)d\delta\right)G_{t}^{l}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{16}\delta^{il}\delta^{jk}+\frac{11}{144}\delta^{ik}\delta^{jl}+\frac{1}{8}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}H^{i}(t\rho)d\rho\int_{0}^{1}\left(\int_{0}^{\theta}(1-\delta)G_{t}^{j}(t\delta)G_{t}^{k}(t\delta)d\delta\right)G_{t}^{l}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{8}\delta^{il}\delta^{jk}+\frac{1}{12}\delta^{ik}\delta^{jl}+\frac{1}{12}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}H^{i}(t\rho)d\rho\int_{0}^{1}\left(\int_{0}^{\theta}G_{t}^{k}(t\delta)d\delta\right)(1-\theta)G_{t}^{j}(t\theta)G_{t}^{l}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{18}\delta^{il}\delta^{jk}+\frac{1}{8}\delta^{ik}\delta^{jl}+\frac{1}{18}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Freeze all 
+\end_layout
+
+\begin_layout Standard
+The integral becomes 
+\begin_inset Formula 
+\begin{align*}
+ & t^{3}\int_{\substack{0<\rho<1\\
+0<\delta<\theta<1
+}
+}d\rho d\delta d\theta\left(\int_{0}^{t\rho}\phi_{i}(X_{u})(\sigma dB)_{u}^{i}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{v}^{k}}{t-v}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{v}^{l}}{t-v}\right)\\
+ & =t^{3}\int_{\substack{0<\rho<1\\
+0<\delta<\theta<1
+}
+}d\rho d\delta d\theta\left(\int_{0}^{t\max(\rho,\delta,\theta)}{\bf 1}_{[0,t\rho]}\phi_{i}(X_{u})(\sigma dB)_{u}^{i}\right)\left(\int_{0}^{t\max(\rho,\delta,\theta)}{\bf 1}_{[0,t\delta]}\frac{(\sigma dB)_{v}^{k}}{t-v}\right)\left(\int_{0}^{t\max(\rho,\delta,\theta)}{\bf {\bf 1}}_{[0,t\theta]}\frac{(\sigma dB)_{v}^{l}}{t-v}\right).
+\end{align*}
+
+\end_inset
+
+Write the three integral processes as 
+\begin_inset Formula $W,Y,Z$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $WdYdZ$
+\end_inset
+
+ term produces zero expectation.
+ We only need to consider 
+\begin_inset Formula $YdWdZ$
+\end_inset
+
+ and 
+\begin_inset Formula $ZdWdY$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+The 
+\begin_inset Formula $YdWdZ$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\delta_{il}\int_{0}^{\min(t\rho,t\theta)}\mathbb{E}\left[\int_{0}^{\min(s,t\delta)}\frac{(\sigma dB)_{v}^{k}}{t-v}\phi_{i}(X_{s})\frac{1}{t-s}\right]ds
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\delta_{il}\int_{0}^{\min(\rho,\theta)}\mathbb{E}\left[\int_{0}^{\min(t\eta,t\delta)}\frac{(\sigma dB)_{v}^{k}}{t-v}\phi_{i}(X_{t\eta})\frac{1}{1-\eta}\right]d\eta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\phi_{i}\cdot\delta_{il}\cdot t\cdot\int_{0}^{\min(\rho,\theta)}\mathbb{E}\left[\int_{0}^{t\min(\eta,\delta)}\frac{(\sigma dB)_{v}^{k}}{t-v}\int_{0}^{t\eta}\frac{(\sigma dB)_{v}^{j}}{t-v}\right]d\eta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We get 
+\begin_inset Formula 
+\begin{align*}
+ & \int_{0}^{t\max(\rho,\delta,\theta)}\left(\int_{0}^{s}{\bf 1}_{[0,t\delta]}\frac{(\sigma dB)_{v}^{k}}{t-v}\right){\bf 1}_{[0,t\rho]}{\bf 1}_{[0,t\theta]}\frac{\phi_{i}(X_{s})}{t-s}ds\times\delta^{il}\\
+ & =t^{-1}\int_{0}^{\rho\wedge\theta}G_{t}^{k}(t(\eta\wedge\delta))\frac{\phi_{i}(X_{t\eta})}{1-\eta}d\eta\times\delta^{il}.
+\end{align*}
+
+\end_inset
+
+After expanding 
+\begin_inset Formula $\phi_{i},$
+\end_inset
+
+ the new target becomes 
+\begin_inset Formula 
+\begin{align*}
+ & \partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\delta^{il}\times\\
+ & \ \ \ t^{2}\int_{\substack{0<\rho<1\\
+0<\delta<\theta<1
+}
+}d\rho d\delta d\theta\int_{0}^{\rho\wedge\theta}G_{t}^{k}(t(\eta\wedge\delta))G_{t}^{j}(t\eta)d\eta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{5}{72}\delta^{il}\delta^{jk}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The 
+\begin_inset Formula $ZdWdY$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+We get 
+\begin_inset Formula 
+\begin{align*}
+ & \int_{0}^{t\max(\rho,\delta,\theta)}\left(\int_{0}^{s}{\bf {\bf 1}}_{[0,t\theta]}\frac{(\sigma dB)_{v}^{l}}{t-v}\right){\bf 1}_{[0,t\rho]}{\bf 1}_{[0,t\delta]}\frac{\phi_{i}(X_{s})}{t-s}ds\times\delta^{ik}\\
+ & =t^{-1}\int_{0}^{\rho\wedge\delta}G_{t}^{l}(t(\eta\wedge\theta))\frac{\phi_{i}(X_{t\eta})}{1-\eta}d\eta\times\delta^{ik}.
+\end{align*}
+
+\end_inset
+
+After expanding 
+\begin_inset Formula $\phi_{i},$
+\end_inset
+
+ the new target becomes
+\begin_inset Formula 
+\begin{align*}
+ & \partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\delta^{ik}\times\\
+ & \ \ \ t^{2}\int_{\substack{0<\rho<1\\
+0<\delta<\theta<1
+}
+}d\rho d\delta d\theta\int_{0}^{\rho\wedge\delta}G_{t}^{l}(t(\eta\wedge\theta))G_{t}^{j}(t\eta)d\eta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{24}\delta^{ik}\delta^{jl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm IJ;IK)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\begin_inset Formula 
+\[
+t\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(X_{tr})\frac{X_{tr}^{i}}{1-r}dr\right)\otimes\psi(X_{t\rho})d\rho\otimes\int_{0}^{t}\left(\int_{0}^{v/t}\phi_{k}(X_{tu})\frac{X_{tu}^{k}}{1-u}du\right)\otimes\phi_{l}(X_{v})(\sigma dB)_{v}^{l}.
+\]
+
+\end_inset
+
+Possibilities:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iii) Freeze both.
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}\left(\int_{0}^{\rho}(1-r)G_{t}^{j}(tr)G_{t}^{i}(tr)\left(\int_{0}^{tr}\left(\int_{0}^{v/t}G_{t}^{k}(tu)du\right)(\sigma dB)_{v}^{l}\right)dr\right)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{108}\delta^{il}\delta^{jk}+\frac{1}{108}\delta^{ik}\delta^{jl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}\left(\int_{0}^{\rho}G_{t}^{i}(tr)dr\right)(1-\rho)G_{t}^{j}(t\rho)\left(\int_{0}^{t\rho}\left(\int_{0}^{v/t}G_{t}^{k}(tu)du\right)(\sigma dB)_{v}^{l}\right)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{216}\delta^{il}\delta^{jk}+\frac{1}{54}\delta^{ik}\delta^{jl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Freeze both 
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula 
+\[
+\Xi_{l}(v)\triangleq\left(\int_{0}^{v/t}\phi_{k}(W_{tu})\frac{X_{tu}^{k}}{1-u}du\right)\otimes\phi_{l}(X_{v}).
+\]
+
+\end_inset
+
+The integral becomes 
+\begin_inset Formula 
+\begin{align*}
+t^{2}\int_{0<r<\rho<1}\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\int_{0}^{tr}\Xi_{l}(v)(\sigma dB)_{v}^{l} & \doteq t^{2}\int_{0<r<\rho<1}drd\rho\int_{0}^{tr}\frac{\Xi_{l}(v)}{t-v}dv\times\delta^{il}\\
+ & =t^{2}\int_{0<r<\rho<1}drd\rho\int_{0}^{r}\frac{\Xi_{l}(t\eta)}{1-\eta}d\eta\times\delta^{il}.
+\end{align*}
+
+\end_inset
+
+Note that
+\begin_inset Formula 
+\begin{equation}
+\Xi_{l}(t\eta)=\int_{0}^{\eta}\phi_{k}(X_{tu})\frac{X_{tu}^{k}}{1-u}du\otimes\phi_{l}(X_{t\eta})\label{eq:Xil}
+\end{equation}
+
+\end_inset
+
+New target becomes 
+\begin_inset Formula 
+\begin{align*}
+ & \phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times\delta^{il}t^{2}\int_{0<r<\rho<1}drd\rho\int_{0}^{r}\frac{d\eta}{1-\eta}\int_{0}^{\eta}(1-u)G_{t}^{j}(tu)G_{t}^{k}(tu)du\\
+ & \ \ \ +\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times\delta^{il}t^{2}\int_{0<r<\rho<1}drd\rho\int_{0}^{r}\left(\int_{0}^{\eta}G_{t}^{k}(tu)du\right)G_{t}^{j}(t\eta){\color{blue}d\eta}.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{48}\delta^{il}\delta^{jk}\right)}+\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{72}\delta^{il}\delta^{jk}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JI;IK)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\begin_inset Formula 
+\[
+t\int_{0}^{1}\left(\int_{0}^{\rho}\psi(X_{tr})dr\right)\otimes\phi_{i}(X_{t\rho})\frac{X_{t\rho}^{i}}{1-\rho}d\rho\otimes\int_{0}^{t}\left(\int_{0}^{v/t}\phi_{k}(X_{tu})\frac{X_{tu}^{k}}{1-u}du\right)\otimes\phi_{l}(X_{v})(\sigma dB)_{v}^{l}.
+\]
+
+\end_inset
+
+Possibilities:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iii) Freeze both.
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}\left(\int_{0}^{\rho}(1-r)G_{t}^{j}(tr)dr\right)G_{t}^{i}(t\rho)\left(\int_{0}^{t\rho}\left(\int_{0}^{v/t}G_{t}^{k}(tu)du\right)(\sigma dB)_{v}^{l}\right)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{17}{216}\delta^{il}\delta^{jk}+\frac{1}{108}\delta^{ik}\delta^{jl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}\rho(1-\rho)G_{t}^{j}(t\rho)G_{t}^{i}(t\rho)\left(\int_{0}^{t\rho}\left(\int_{0}^{v/t}G_{t}^{k}(tu)du\right)(\sigma dB)_{v}^{l}\right)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{7}{216}\delta^{il}\delta^{jk}+\frac{7}{216}\delta^{ik}\delta^{jl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Freeze both
+\end_layout
+
+\begin_layout Standard
+Define 
+\begin_inset Formula $\Xi_{l}(v)$
+\end_inset
+
+ as, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Xi_{l}(v)\triangleq\left(\int_{0}^{v/t}\phi_{k}(X_{tu})\frac{X_{tu}^{k}}{1-u}du\right)\otimes\phi_{l}(X_{v}).
+\]
+
+\end_inset
+
+The integral becomes 
+\begin_inset Formula 
+\begin{align*}
+t^{2}\int_{0}^{1}\rho\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\rho}\Xi_{l}(v)(\sigma dB)_{v}^{l}\right)d\rho & \doteq t^{2}\int_{0}^{1}\rho\int_{0}^{\rho}\frac{\Xi_{l}(t\eta)}{1-\eta}d\eta d\rho\times\delta^{il}.
+\end{align*}
+
+\end_inset
+
+New target becomes 
+\begin_inset Formula 
+\begin{align*}
+ & \psi\otimes\phi_{i}\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times\delta^{il}t^{2}\int_{0}^{1}\rho\left(\int_{0}^{\rho}\frac{d\eta}{1-\eta}\int_{0}^{\eta}(1-u)G_{t}^{j}(tu)G_{t}^{k}(tu)du\right)d\rho\\
+ & \ \ \ +\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times\delta^{il}t^{2}\int_{0}^{1}\rho\left(\int_{0}^{\rho}\left(\int_{0}^{\eta}G_{t}^{k}(tu)du\right)G_{t}^{j}(t\eta)d\eta\right)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\phi_{i}\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{7}{48}\delta^{il}\delta^{jk}\right)}+\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}{\color{red}\left(\frac{5}{72}\delta^{il}\delta^{jk}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm KJ;IK)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\begin_inset Formula 
+\[
+-t\int_{0}^{1}\left(\int_{0}^{t\rho}\phi_{i}(X_{u})(\sigma dB)_{u}^{i}\right)\otimes\psi(X_{t\rho})d\rho\otimes\int_{0}^{t}\left(\int_{0}^{v/t}\phi_{k}(X_{tu})\frac{X_{tu}^{k}}{1-u}du\right)\otimes\phi_{l}(X_{v})(\sigma dB)_{v}^{l}.
+\]
+
+\end_inset
+
+We call 
+\begin_inset Formula 
+\[
+\Xi_{l}(v)\triangleq\left(\int_{0}^{v/t}\phi_{k}(X_{tu})\frac{X_{tu}^{k}}{1-u}du\right)\otimes\phi_{l}(X_{v}).
+\]
+
+\end_inset
+
+Possibilities:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Freeze 
+\begin_inset Formula $\psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}H^{i}(t\rho)(1-\rho)G_{t}^{j}(t\rho)\left(\int_{0}^{t\rho}\left(\int_{0}^{v/t}G_{t}^{k}(tu)du\right)(\sigma dB)_{v}^{l}\right)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\color inherit
+
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{36}\delta^{ik}\delta^{jl}-\frac{1}{72}\delta^{il}\delta^{jk}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Freeze 
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The integral becomes
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+-t\int_{0}^{1}\left(\int_{0}^{t\rho}\phi_{i}(X_{u})(\sigma dB)_{u}^{i}\right)\left(\int_{0}^{t\rho}\Xi_{l}(v)(\sigma dB)_{v}^{l}\right)d\rho & \doteq-t\int_{0}^{1}d\rho\int_{0}^{t\rho}\phi_{i}(X_{v})\Xi_{l}(v)dv\times\delta^{il}\\
+ & =-t^{2}\int_{0}^{1}d\rho\int_{0}^{\rho}\phi_{i}(X_{tr})\Xi_{l}(tr)dr\times\delta^{il}.
+\end{align*}
+
+\end_inset
+
+Recall that
+\begin_inset Formula 
+\[
+\Xi_{l}(tr)\triangleq\left(\int_{0}^{r}\phi_{k}(X_{tu})\frac{X_{tu}^{k}}{1-u}du\right)\otimes\phi_{l}(X_{tr}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\delta^{il}\times\\
+ & \ \ \ t^{2}\int_{0}^{1}d\rho\int_{0}^{\rho}(1-r)G_{t}^{j}(tr)\left(\int_{0}^{r}G_{t}^{k}(tu)du\right)dr.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{36}\delta^{il}\delta^{jk}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\delta^{il}\times\\
+ & \ \ \ t^{2}\int_{0}^{1}d\rho\int_{0}^{\rho}dr\int_{0}^{r}(1-u)G_{t}^{j}(tu)G_{t}^{k}(tu)du.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{24}\delta^{il}\delta^{jk}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\delta^{il}\\
+ & \ \ \ t^{2}\int_{0}^{1}d\rho\int_{0}^{\rho}\left(\int_{0}^{r}G_{t}^{k}(tu)du\right)(1-r)G_{t}^{j}(tr)dr.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{36}\delta^{il}\delta^{jk}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JK;IK)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\begin_inset Formula 
+\[
+-\delta^{il}t^{2}\int_{0}^{1}\left(\int_{0}^{\rho}\psi(X_{tr})dr\right)\otimes\phi_{i}(X_{t\rho})\otimes\left(\int_{0}^{\rho}\phi_{k}(X_{t\eta})\frac{X_{t\eta}^{k}}{1-\eta}d\eta\right)\otimes\phi_{l}(X_{t\rho})d\rho.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\delta^{il}\times\\
+ & \ \ \ t^{2}\int_{0}^{1}\left(\int_{0}^{\rho}(1-r)G_{t}^{j}(tr)dr\right)\left(\int_{0}^{\rho}G_{t}^{k}(t\eta)d\eta\right)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{5}{72}\delta^{il}\delta^{jk}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\delta^{il}\\
+ & \ \ \ t^{2}\int_{0}^{1}\rho(1-\rho)G_{t}^{j}(t\rho)\left(\int_{0}^{\rho}G_{t}^{k}(t\eta)d\eta\right)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{18}\delta^{il}\delta^{jk}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\psi\otimes\phi_{i}\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\delta^{il}\\
+ & \ \ \ t^{2}\int_{0}^{1}\rho\left(\int_{0}^{\rho}(1-\eta)G_{t}^{j}(t\eta)G_{t}^{k}(t\eta)d\eta\right)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\phi_{i}\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{8}\delta^{il}\delta^{jk}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\delta^{il}\\
+ & \ \ \ t^{2}\int_{0}^{1}\rho(1-\rho)\left(\int_{0}^{\rho}G_{t}^{k}(t\eta)d\eta\right)G_{t}^{j}(t\rho)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{18}\delta^{il}\delta^{jk}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm IJ;KI})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\begin_inset Formula 
+\[
+t\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(X_{tr})\frac{X_{tr}^{i}}{1-r}dr\right)\otimes\psi(X_{t\rho})d\rho\otimes\int_{0}^{1}\left(\int_{0}^{t\theta}\phi_{k}(X_{u})(\sigma dB)_{u}^{k}\right)\otimes\phi_{l}(X_{t\theta})\frac{X_{t\theta}^{l}}{1-\theta}d\theta.
+\]
+
+\end_inset
+
+Possibilities:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\phi_{i};$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(ii) Exxpand 
+\begin_inset Formula $\psi$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iii) Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iv) Freeze all.
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\\
+ & \ \ \ t\int_{0}^{1}\left(\int_{0}^{\rho}(1-r)G_{t}^{j}(tr)G_{t}^{i}(tr)dr\right)d\rho\int_{0}^{1}H^{k}(t\theta)G_{t}^{l}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{7}{108}\delta^{il}\delta^{jk}+\frac{7}{108}\delta^{ik}\delta^{jl}+\frac{1}{6}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\\
+ & \ \ \ t\int_{0}^{1}\left(\int_{0}^{\rho}G_{t}^{i}(tr)dr\right)(1-\rho)G_{t}^{j}(t\rho)d\rho\int_{0}^{1}H^{k}(t\theta)G_{t}^{l}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{5}{108}\delta^{il}\delta^{jk}+\frac{13}{216}\delta^{ik}\delta^{jl}+\frac{1}{12}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\\
+ & \ \ \ t\int_{0}^{1}\left(\int_{0}^{\rho}G_{t}^{i}(tr)dr\right)d\rho\int_{0}^{1}(1-\theta)H^{k}(t\theta)G_{t}^{j}(t\theta)G_{t}^{l}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}{\color{red}\left(\frac{5}{72}\delta^{il}\delta^{jk}+\frac{5}{48}\delta^{ik}\delta^{jl}+\frac{5}{72}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Freeze all
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+t\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(X_{tr})\frac{X_{tr}^{i}}{1-r}dr\right)\otimes\psi(X_{t\rho})d\rho\otimes\int_{0}^{1}\left(\int_{0}^{t\theta}\phi_{k}(X_{u})(\sigma dB)_{u}^{k}\right)\otimes\phi_{l}(X_{t\theta})\frac{X_{t\theta}^{l}}{1-\theta}d\theta.
+\]
+
+\end_inset
+
+The three relevant stochastic integrals are:
+\begin_inset Formula 
+\[
+W=\int_{0}^{t\max(r,\theta)}{\bf 1}_{[0,tr]}\frac{(\sigma dB)_{u}^{i}}{t-u},\ Y=\int_{0}^{t\max(r,\theta)}{\bf 1}_{[0,t\theta]}\frac{(\sigma dB)_{u}^{l}}{t-u},\ Z=\int_{0}^{t\max(r,\theta)}{\bf 1}_{[0,t\theta]}\phi_{k}(W_{u})(\sigma dB)_{u}^{k}.
+\]
+
+\end_inset
+
+The 
+\begin_inset Formula $WdXdY$
+\end_inset
+
+ term produces zero expectation.
+ We only need to consider 
+\begin_inset Formula $YdWdZ$
+\end_inset
+
+ and 
+\begin_inset Formula $WdYdZ$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+The 
+\begin_inset Formula $YdWdZ$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+The integral becomes 
+\begin_inset Formula 
+\[
+\delta^{ik}\int_{0}^{tr\wedge\theta}\left(\int_{0}^{s}{\bf 1}_{[0,t\theta]}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\frac{\phi_{k}(X_{s})}{t-s}ds=\delta^{ik}\int_{0}^{r\wedge\theta}\left(\int_{0}^{tv}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\frac{\phi_{k}(X_{tv})}{1-v}dv.
+\]
+
+\end_inset
+
+After expanding 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+, the new target becomes 
+\begin_inset Formula 
+\begin{align*}
+ & \phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\delta^{ik}\\
+ & \ \ \ t^{2}\int_{\substack{0<r<\rho<1\\
+0<\theta<1
+}
+}drd\rho d\theta\int_{0}^{r\wedge\theta}G_{t}^{l}(tv)G_{t}^{j}(tv)dv.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{24}\delta^{ik}\delta^{jl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The 
+\begin_inset Formula $WdYdZ$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+The integral becomes 
+\begin_inset Formula 
+\[
+\delta^{lk}\int_{0}^{t\theta}\left(\int_{0}^{s}{\bf 1}_{[0,tr]}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\frac{\phi_{k}(X_{s})}{t-s}ds=\delta^{lk}\int_{0}^{\theta}\left(\int_{0}^{t\eta\wedge r}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\frac{\phi_{k}(X_{t\eta})}{1-\eta}d\eta.
+\]
+
+\end_inset
+
+After expanding 
+\begin_inset Formula $\phi_{k},$
+\end_inset
+
+ the new target becomes
+\begin_inset Formula 
+\begin{align*}
+ & \phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\delta^{lk}\\
+ & \ \ \ t^{2}\int_{\substack{0<r<\rho<1\\
+0<\theta<1
+}
+}drd\rho d\theta\int_{0}^{\theta}G_{t}^{i}(t(\eta\wedge r))G_{t}^{j}(t\eta)d\eta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{12}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JI;KI)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target: 
+\begin_inset Formula 
+\[
+t\int_{0}^{1}\left(\int_{0}^{\rho}\psi(X_{tr})dr\right)\otimes\phi_{i}(X_{t\rho})\frac{X_{t\rho}^{i}}{1-\rho}d\rho\otimes\int_{0}^{1}\left(\int_{0}^{t\theta}\phi_{k}(X_{u})(\sigma dB)^{k}\right)\otimes\phi_{l}(X_{t\theta})\frac{X_{t\theta}^{l}}{1-\theta}d\theta.
+\]
+
+\end_inset
+
+Possibilities:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iii) Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iv) Freeze all.
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}\left(\int_{0}^{\rho}(1-r)G_{t}^{j}(tr)dr\right)G_{t}^{i}(t\rho)d\rho\int_{0}^{1}H^{k}(t\theta)G_{t}^{l}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{19}{108}\delta^{il}\delta^{jk}+\frac{23}{216}\delta^{ik}\delta^{jl}+\frac{1}{6}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}\rho(1-\rho)G_{t}^{j}(t\rho)G_{t}^{i}(t\rho)d\rho\int_{0}^{1}H^{k}(t\theta)G_{t}^{l}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{31}{216}\delta^{il}\delta^{jk}+\frac{31}{216}\delta^{ik}\delta^{jl}+\frac{1}{3}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \psi\otimes\phi_{i}\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}\rho G_{t}^{i}(t\rho)d\rho\int_{0}^{1}H^{k}(t\theta)(1-\theta)G_{t}^{j}(t\theta)G_{t}^{l}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}{\color{red}\left(\frac{13}{72}\delta^{il}\delta^{jk}+\frac{11}{48}\delta^{ik}\delta^{jl}+\frac{13}{72}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Freeze all
+\end_layout
+
+\begin_layout Standard
+The integral becomes
+\begin_inset Formula 
+\[
+t^{3}\int_{\substack{0<\rho<1\\
+0<\theta<1
+}
+}\rho\left(\int_{0}^{t\max(\rho,\theta)}{\bf 1}_{[0,t\rho]}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\max(\rho,\theta)}{\bf 1}_{[0,t\theta]}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\left(\int_{0}^{t\max(\rho,\theta)}{\bf 1}_{[0,t\theta]}\phi_{k}(W_{u})(\sigma dB)^{k}\right)d\rho d\theta.
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula 
+\[
+W_{s}\triangleq\int_{0}^{s}{\bf 1}_{[0,t\rho]}\frac{(\sigma dB)_{u}^{i}}{t-u},\ Y_{s}\triangleq\int_{0}^{s}{\bf 1}_{[0,t\theta]}\frac{(\sigma dB)_{u}^{l}}{t-u},\ Z_{s}\triangleq\int_{0}^{s}{\bf 1}_{[0,t\theta]}\phi_{k}(W_{u})(\sigma dB)^{k}.
+\]
+
+\end_inset
+
+The 
+\begin_inset Formula $ZdWdY$
+\end_inset
+
+ term produces zero expectation.
+\end_layout
+
+\begin_layout Subsubsection
+The 
+\begin_inset Formula $WdYdZ$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+The integral further becomes
+\begin_inset Formula 
+\[
+\delta^{kl}\int_{0}^{t\theta}\left(\int_{0}^{s}{\bf 1}_{[0,t\rho]}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\frac{\phi_{k}(X_{s})}{t-s}ds=\delta^{kl}\int_{0}^{\theta}\left(\int_{0}^{tv\wedge\rho}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\frac{\phi_{k}(X_{tv})}{1-v}dv.
+\]
+
+\end_inset
+
+New target:
+\begin_inset Formula 
+\begin{align*}
+ & \psi\otimes\phi_{i}\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\delta^{kl}\times\\
+ & \ \ \ t^{2}\int_{\substack{0<\rho<1\\
+0<\theta<1
+}
+}\rho d\rho d\theta\int_{0}^{\theta}G_{t}^{i}(t(v\wedge\rho))G_{t}^{j}(tv)dv.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\phi_{i}\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{6}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The 
+\begin_inset Formula $YdWdZ$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+The integral further becomes
+\begin_inset Formula 
+\[
+\delta^{ik}\int_{0}^{t\rho\wedge\theta}\left(\int_{0}^{s}{\bf 1}_{[0,t\theta]}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\frac{\phi_{k}(X_{s})}{t-s}ds=\delta^{ik}\int_{0}^{\rho\wedge\theta}\left(\int_{0}^{tv}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\frac{\phi_{k}(X_{tv})}{1-v}dv.
+\]
+
+\end_inset
+
+New target:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \psi\otimes\phi_{i}\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\delta^{ik}\times\\
+ & \ \ \ t^{2}\int_{\substack{0<\rho<1\\
+0<\theta<1
+}
+}\rho d\rho d\theta\int_{0}^{\rho\wedge\theta}G_{t}^{l}(tv)G_{t}^{j}(tv)dv.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\phi_{i}\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{8}\delta^{ik}\delta^{jl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm KJ;KI)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\begin_inset Formula 
+\[
+-t\int_{0}^{1}\left(\int_{0}^{t\rho}\phi_{i}(X_{u})(\sigma dB)_{u}^{i}\right)\otimes\psi(X_{t\rho})d\rho\otimes\int_{0}^{1}\left(\int_{0}^{t\theta}\phi_{k}(X_{u})(\sigma dB)_{u}^{k}\right)\otimes\phi_{l}(X_{t\theta})\frac{X_{t\theta}^{l}}{1-\theta}d\theta.
+\]
+
+\end_inset
+
+Possibilities:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iii) Freeze both.
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\begin_inset Formula 
+\begin{align*}
+ & -\phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}H^{i}(t\rho)(1-\rho)G_{t}^{j}(t\rho)d\rho\int_{0}^{1}H^{k}(t\theta)G_{t}^{l}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{9}\delta^{il}\delta^{jk}-\frac{1}{8}\delta^{ik}\delta^{jl}-\frac{1}{4}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\begin_inset Formula 
+\begin{align*}
+ & -\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}H^{i}(t\rho)d\rho\int_{0}^{1}H^{k}(t\theta)(1-\theta)G_{t}^{j}(t\theta)G_{t}^{l}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}{\color{red}\left(-\frac{5}{36}\delta^{il}\delta^{jk}-\frac{5}{24}\delta^{ik}\delta^{jl}-\frac{5}{36}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Freeze both
+\end_layout
+
+\begin_layout Standard
+Define 
+\begin_inset Formula 
+\[
+W_{s}\triangleq\int_{0}^{s}{\bf 1}_{[0,t\rho]}\phi_{i}(X_{u})(\sigma dB)_{u}^{i},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Y_{s}\triangleq\int_{0}^{s}{\bf 1}_{[0,t\theta]}\phi_{k}(X_{u})(\sigma dB)_{u}^{k},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Z_{s}\triangleq\int_{0}^{s}{\bf 1}_{[0,t\theta]}\frac{(\sigma dB)_{u}^{l}}{t-u}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The 
+\begin_inset Formula $WdYdZ$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+The integral becomes 
+\begin_inset Formula 
+\begin{align*}
+\delta^{kl}\int_{0}^{t\theta}\left(\int_{0}^{s}{\bf 1}_{[0,t\rho]}\phi_{i}(X_{u})(\sigma dB)_{u}^{i}\right)\frac{\phi_{k}(X_{s})}{t-s}ds & =\delta^{kl}\int_{0}^{\theta}\left(\int_{0}^{tv\wedge\rho}\phi_{i}(X_{u})(\sigma dB)_{u}^{i}\right)\frac{\phi_{k}(X_{tv})}{1-v}dv.
+\end{align*}
+
+\end_inset
+
+New target:
+\begin_inset Formula 
+\begin{align*}
+ & -\phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\delta^{kl}\times\\
+ & \ \ \ t^{2}\int_{\substack{0<\rho<1\\
+0<\theta<1
+}
+}d\rho d\theta\int_{0}^{\theta}H^{i}(t(v\wedge\rho))G_{t}^{j}(tv)dv.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{6}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The 
+\begin_inset Formula $YdWdZ$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+The integral becomes 
+\begin_inset Formula 
+\[
+\delta^{il}\int_{0}^{t\rho\wedge\theta}\left(\int_{0}^{s}{\bf 1}_{[0,t\theta]}\phi_{k}(X_{u})(\sigma dB)_{u}^{k}\right)\frac{\phi_{i}(X_{s})}{t-s}ds=\delta^{il}\int_{0}^{\rho\wedge\theta}\left(\int_{0}^{tv}\phi_{k}(X_{u})(\sigma dB)_{u}^{k}\right)\frac{\phi_{i}(X_{tv})}{1-v}dv.
+\]
+
+\end_inset
+
+New target:
+\begin_inset Formula 
+\begin{align*}
+ & -\partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\delta^{il}\times\\
+ & \ \ \ t^{2}\int_{\substack{0<\rho<1\\
+0<\theta<1
+}
+}d\rho d\theta\int_{0}^{\rho\wedge\theta}H^{k}(tv)G_{t}^{j}(tv)dv.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{9}\delta^{il}\delta^{jk}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The 
+\begin_inset Formula $ZdWdY$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+X_{s}\triangleq\int_{0}^{s}{\bf 1}_{[0,t\rho]}\phi_{i}(X_{u})(\sigma dB)_{u}^{i},\ Y_{s}\triangleq\int_{0}^{s}{\bf 1}_{[0,t\theta]}\phi_{k}(X_{u})(\sigma dB)_{u}^{k},\ Z_{s}\triangleq\int_{0}^{s}{\bf 1}_{[0,t\theta]}\frac{(\sigma dB)_{u}^{l}}{t-u}.
+\]
+
+\end_inset
+
+The integral becomes 
+\begin_inset Formula 
+\[
+\delta^{ik}\int_{0}^{t\rho\wedge\theta}\left(\int_{0}^{s}{\bf 1}_{[0,t\theta]}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\phi_{i}(X_{s})\otimes\phi_{k}(X_{s})ds=\delta^{ik}t\int_{0}^{\rho\wedge\theta}\left(\int_{0}^{tv}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\phi_{i}(X_{tv})\otimes\phi_{k}(X_{tv})dv.
+\]
+
+\end_inset
+
+New target:
+\begin_inset Formula 
+\begin{align*}
+ & -\partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\delta^{ik}t^{2}\int_{\substack{0<\rho<1\\
+0<\theta<1
+}
+}d\rho d\theta\int_{0}^{\rho\wedge\theta}(1-v)G_{t}^{l}(tv)G_{t}^{j}(tv)dv\\
+ & \ \ \ -\phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\delta^{ik}t^{2}\int_{\substack{0<\rho<1\\
+0<\theta<1
+}
+}d\rho d\theta\int_{0}^{\rho\wedge\theta}(1-v)G_{t}^{l}(tv)G_{t}^{j}(tv)dv.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{12}\delta^{ik}\delta^{jl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++\phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{12}\delta^{ik}\delta^{jl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JK;KI)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\begin_inset Formula 
+\[
+-\int_{0}^{t}\left(\int_{0}^{v}\psi(X_{u})du\right)\otimes\phi_{i}(X_{v})(\sigma dB)_{v}^{i}\otimes\int_{0}^{1}\left(\int_{0}^{t\theta}\phi_{k}(X_{u})(\sigma dB)_{u}^{k}\right)\otimes\phi_{l}(X_{t\theta})\frac{X_{t\theta}^{l}}{1-\theta}d\theta.
+\]
+
+\end_inset
+
+Possibilities:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Freeze 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\begin_inset Formula 
+\begin{align*}
+ & -\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times\\
+ & \ \ \ \int_{0}^{1}d\theta\left(\int_{0}^{t\theta}v(\sigma dB)_{v}^{i}\right)H^{k}(t\theta)(1-\theta)G_{t}^{j}(t\theta)G_{t}^{l}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{9}\delta^{il}\delta^{jk}-\frac{1}{8}\delta^{ik}\delta^{jl}-\frac{1}{9}\delta^{ij}\delta^{kl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Freeze 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Define 
+\begin_inset Formula 
+\[
+\Xi_{i}(v)\triangleq\left(\int_{0}^{v}\psi(X_{u})du\right)\otimes\phi_{i}(X_{v}).
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula 
+\[
+W_{s}\triangleq\int_{0}^{s}\Xi_{i}(v)(\sigma dB)_{v}^{i},\ Y_{s}\triangleq\int_{0}^{s}\phi_{k}(X_{u})(\sigma dB)_{u}^{k},\ Z_{s}\triangleq\int_{0}^{s}\frac{(\sigma dB)_{u}^{l}}{t-u}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The 
+\begin_inset Formula $WdYdZ$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+The integral becomes 
+\begin_inset Formula 
+\[
+\delta^{kl}\int_{0}^{t\theta}\left(\int_{0}^{s}\Xi_{i}(v)(\sigma dB)_{v}^{i}\right)\frac{\phi_{k}(X_{s})}{t-s}ds=\delta^{kl}\int_{0}^{\theta}\left(\int_{0}^{tv}\Xi_{i}(u)(\sigma dB)_{u}^{i}\right)\frac{\phi_{k}(X_{tv})}{1-v}dv.
+\]
+
+\end_inset
+
+New target:
+\begin_inset Formula 
+\begin{align*}
+ & -\psi\otimes\phi_{i}\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\delta^{kl}\times\\
+ & \ \ \ t\int_{0}^{1}d\theta\int_{0}^{\theta}dvG_{t}^{j}(tv)\int_{0}^{tv}u(\sigma dB)_{u}^{i}.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\phi_{i}\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{12}\delta^{ij}\delta^{kl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The 
+\begin_inset Formula $YdXdZ$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+The integral becomes 
+\begin_inset Formula 
+\[
+\delta^{il}\int_{0}^{t\theta}\left(\int_{0}^{s}\phi_{k}(X_{u})(\sigma dB)_{u}^{k}\right)\frac{\Xi_{i}(s)}{t-s}ds=\delta^{il}\int_{0}^{\theta}\left(\int_{0}^{tv}\phi_{k}(X_{u})(\sigma dB)_{u}^{k}\right)\frac{\Xi_{i}(tv)}{1-v}dv.
+\]
+
+\end_inset
+
+Recall that 
+\begin_inset Formula 
+\[
+\Xi_{i}(tv)=\left(\int_{0}^{tv}\psi(X_{u})du\right)\otimes\phi_{i}(X_{tv})=t\int_{0}^{v}\psi(X_{tr})dr\otimes\phi_{i}(X_{tv}).
+\]
+
+\end_inset
+
+New target: 
+\begin_inset Formula 
+\begin{align*}
+ & -\partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\delta^{il}t^{2}\int_{0}^{1}d\theta\int_{0}^{\theta}H^{k}(tv)\frac{1}{1-v}\int_{0}^{v}(1-r)G_{t}^{j}(tr)drdv\\
+ & \ \ \ -\psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\delta^{il}t^{2}\int_{0}^{1}d\theta\int_{0}^{\theta}vH^{k}(tv)G_{t}^{j}(tv)dv.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{9}\delta^{il}\delta^{jk}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++\psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{5}{36}\delta^{il}\delta^{jk}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The 
+\begin_inset Formula $ZdXdY$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+W_{s}\triangleq\int_{0}^{s}\Xi_{i}(v)(\sigma dB)_{v}^{i},\ Y_{s}\triangleq\int_{0}^{s}\phi_{k}(X_{u})(\sigma dB)_{u}^{k},\ Z_{s}\triangleq\int_{0}^{s}\frac{(\sigma dB)_{u}^{l}}{t-u}.
+\]
+
+\end_inset
+
+The integral becomes 
+\begin_inset Formula 
+\[
+\delta^{ik}\int_{0}^{t\theta}\left(\int_{0}^{s}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\Xi_{i}(s)\otimes\phi_{k}(X_{s})ds=\delta^{ik}t\int_{0}^{\theta}\left(\int_{0}^{tv}\frac{(\sigma dB)_{u}^{l}}{t-u}\right)\Xi_{i}(tv)\otimes\phi_{k}(X_{tv})dv.
+\]
+
+\end_inset
+
+New target:
+\begin_inset Formula 
+\begin{align*}
+ & -\partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\delta^{ik}t^{2}\int_{0}^{1}d\theta\int_{0}^{\theta}G_{t}^{l}(tv)\left(\int_{0}^{v}(1-r)G_{t}^{j}(tr)dr\right)dv\\
+ & \ \ \ -\psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\delta^{ik}t^{2}\int_{0}^{1}d\theta\int_{0}^{\theta}G_{t}^{l}(tv)v(1-v)G_{t}^{j}(tv)dv\\
+ & \ \ \ -\psi\otimes\phi_{i}\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\delta^{ik}t^{2}\int_{0}^{1}d\theta\int_{0}^{\theta}G_{t}^{l}(tv)v(1-v)G_{t}^{j}(tv)dv.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{24}\delta^{ik}\delta^{jl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++\psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{12}\delta^{ik}\delta^{jl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++\psi\otimes\phi_{i}\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{12}\delta^{ik}\delta^{jl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm IJ;KK)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\begin_inset Formula 
+\[
+-t\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(X_{tr})\frac{X_{tr}^{i}}{1-r}dr\right)\otimes\psi(X_{t\rho})d\rho\otimes\int_{0}^{t}\left(\int_{0}^{v}\phi_{k}(X_{u})(\sigma dB)^{k}\otimes\phi_{l}(X_{v})\right)(\sigma dB)_{v}^{l}.
+\]
+
+\end_inset
+
+Possibilities:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iii) Freeze both.
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}\left(\int_{0}^{\rho}(1-r)G_{t}^{j}(tr)G_{t}^{i}(tr)dr\right)\left(\int_{0}^{t\rho}H^{k}(v)(\sigma dB)_{v}^{l}\right)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{27}\delta^{il}\delta^{jk}-\frac{1}{27}\delta^{ik}\delta^{jl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}\left(\int_{0}^{\rho}G_{t}^{i}(tr)dr\right)(1-\rho)G_{t}^{j}(t\rho)\left(\int_{0}^{t\rho}H^{k}(v)(\sigma dB)_{v}^{l}\right)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{54}\delta^{il}\delta^{jk}-\frac{5}{108}\delta^{ik}\delta^{jl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Freeze both
+\end_layout
+
+\begin_layout Standard
+Define 
+\begin_inset Formula 
+\begin{equation}
+\Xi_{l}(v)\triangleq\left(\int_{0}^{v}\phi_{k}(X_{u})(\sigma dB)^{k}\right)\otimes\phi_{l}(X_{v})\label{eq:Xi13}
+\end{equation}
+
+\end_inset
+
+so that 
+\begin_inset Formula 
+\[
+\Xi_{l}(tv)=\left(\int_{0}^{tv}\phi_{k}(X_{u})(\sigma dB)^{k}\right)\otimes\phi_{l}(X_{tv})
+\]
+
+\end_inset
+
+The stochastic integral becomes 
+\begin_inset Formula 
+\[
+\delta^{il}\int_{0}^{tr}\frac{\Xi_{l}(s)}{t-s}ds=\delta^{il}\int_{0}^{r}\frac{\Xi_{l}(tv)}{1-v}dv.
+\]
+
+\end_inset
+
+To produce a nonzero term, the only possibility is expanding 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+.
+ The new target becomes:
+\begin_inset Formula 
+\begin{align*}
+ & -\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\delta^{il}\times\\
+ & \ \ \ t^{2}\int_{0<r<\rho<1}drd\rho\int_{0}^{r}H^{k}(tv)G_{t}^{j}(tv)dv.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}{\color{red}\left(-\frac{1}{18}\delta^{il}\delta^{jk}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JI;KK)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\begin_inset Formula 
+\[
+-t\int_{0}^{1}\left(\int_{0}^{\rho}\psi(X_{tr})dr\right)\otimes\phi_{i}(W_{t\rho})\frac{X_{t\rho}^{i}}{1-\rho}d\rho\otimes\int_{0}^{t}\Xi_{l}(v)(\sigma dB)_{v}^{l},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\Xi_{l}(v)$
+\end_inset
+
+ is defined by (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Xi13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+),
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Xi_{l}(v)\triangleq\left(\int_{0}^{v}\phi_{k}(X_{u})(\sigma dB)^{k}\right)\otimes\phi_{l}(X_{v}).
+\]
+
+\end_inset
+
+Possibilities:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iii) Freeze both.
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}\left(\int_{0}^{\rho}(1-r)G_{t}^{j}(tr)dr\right)G_{t}^{i}(t\rho)\left(\int_{0}^{t\rho}H^{k}(v)(\sigma dB)_{v}^{l}\right)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{4}{27}\delta^{il}\delta^{jk}-\frac{1}{27}\delta^{ik}\delta^{jl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}\rho(1-\rho)G_{t}^{j}(t\rho)G_{t}^{i}(t\rho)\left(\int_{0}^{t\rho}H^{k}(v)(\sigma dB)_{v}^{l}\right)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(-\frac{19}{216}\delta^{il}\delta^{jk}-\frac{19}{216}\delta^{ik}\delta^{jl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Freeze both
+\end_layout
+
+\begin_layout Standard
+The stochastic integral becomes 
+\begin_inset Formula 
+\[
+\delta^{il}\int_{0}^{t\rho}\frac{\Xi_{l}(s)}{t-s}ds=\delta^{il}\int_{0}^{\rho}\frac{\Xi_{l}(tv)}{1-v}dv.
+\]
+
+\end_inset
+
+New target:
+\begin_inset Formula 
+\begin{align*}
+ & -\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\delta^{il}\times\\
+ & \ \ \ t^{2}\int_{0}^{1}\rho\int_{0}^{\rho}H^{k}(tv)G_{t}^{j}(tv)dv.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}{\color{red}\left(-\frac{7}{36}\delta^{il}\delta^{jk}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JK;KK)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Target: 
+\begin_inset Formula 
+\begin{align*}
+ & \int_{0}^{t}\left(\int_{0}^{v}\psi(X_{u})du\right)\otimes\phi_{i}(X_{v})(\sigma dB)_{v}^{i}\otimes\int_{0}^{t}\left(\int_{0}^{v}\phi_{k}(X_{u})(\sigma dB)_{u}^{k}\right)\otimes\phi_{l}(X_{v})(\sigma dB)_{v}^{l}\\
+ & \doteq\delta^{il}\int_{0}^{t}\left(\int_{0}^{v}\psi(X_{u})du\right)\otimes\phi_{i}(X_{v})\otimes\left(\int_{0}^{v}\phi_{k}(X_{u})(\sigma dB)_{u}^{k}\right)\otimes\phi_{l}(X_{v})dv\\
+ & =t^{2}\delta^{il}\int_{0}^{1}\left(\int_{0}^{\rho}\psi(X_{tr})dr\right)\otimes\phi_{i}(X_{t\rho})\otimes\left(\int_{0}^{t\rho}\phi_{k}(X_{u})(\sigma dB)_{u}^{k}\right)\otimes\phi_{l}(X_{t\rho})d\rho.
+\end{align*}
+
+\end_inset
+
+Possibilities:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+;\SpecialChar allowbreak
+
+\begin_inset Newline newline
+\end_inset
+
+(iii) Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+daf
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\delta^{il}\times\\
+ & \ \ \ t^{2}\int_{0}^{1}\left(\int_{0}^{\rho}(1-r)G_{t}^{j}(tr)dr\right)H^{k}(t\rho)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{9}\delta^{il}\delta^{jk}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\delta^{il}\times\\
+ & \ \ \ t^{2}\int_{0}^{1}\rho(1-\rho)G_{t}^{j}(t\rho)H^{k}(t\rho)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\partial_{j}\phi_{i}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{5}{36}\delta^{il}\delta^{jk}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \psi\otimes\phi_{i}\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\delta^{il}\times\\
+ & \ \ \ t^{2}\int_{0}^{1}\rho(1-\rho)H^{k}(t\rho)G_{t}^{j}(t\rho)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}{\color{red}\left(\frac{5}{36}\delta^{il}\delta^{jk}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm KJ;KK)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\begin_inset Formula 
+\[
+t\int_{0}^{1}\left(\int_{0}^{t\rho}\phi_{i}(X_{u})(\sigma dB)_{u}^{i}\right)\otimes\psi(X_{t\rho})d\rho\otimes\int_{0}^{t}\left(\int_{0}^{v}\phi_{k}(X_{u})(\sigma dB)_{u}^{k}\right)\otimes\phi_{l}(X_{v})(\sigma dB)_{v}^{l}.
+\]
+
+\end_inset
+
+Possibilities:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Freeze 
+\begin_inset Formula $\psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Target:
+\begin_inset Formula 
+\begin{align*}
+ & \phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\times\\
+ & \ \ \ t\int_{0}^{1}H^{i}(t\rho)(1-\rho)G_{t}^{j}(t\rho)\left(\int_{0}^{t\rho}H^{k}(v)(\sigma dB)_{v}^{l}\right)d\rho.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{18}\delta^{il}\delta^{jk}+\frac{1}{12}\delta^{ik}\delta^{jl}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Freeze 
+\begin_inset Formula $\psi$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The stochastic integral becomes 
+\begin_inset Formula 
+\begin{align*}
+ & \delta^{il}\int_{0}^{t\rho}\phi_{i}(W_{s})\otimes\left(\int_{0}^{s}\phi_{k}(W_{u})(\sigma dB)_{u}^{k}\right)\otimes\phi_{l}(W_{s})ds\\
+ & =\delta^{il}t\int_{0}^{\rho}\phi_{i}(W_{tr})\otimes\left(\int_{0}^{tr}\phi_{k}(W_{u})(\sigma dB)_{u}^{k}\right)\otimes\phi_{l}(W_{tr})dr.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+New target:
+\begin_inset Formula 
+\begin{align*}
+ & \partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\delta^{il}\times\\
+ & \ \ \ t^{2}\int_{0}^{1}d\rho\int_{0}^{\rho}(1-r)G_{t}^{j}(tr)H^{k}(tr)dr.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{9}\delta^{il}\delta^{jk}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+New target:
+\begin_inset Formula 
+\begin{align*}
+ & \phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\delta^{il}\times\\
+ & \ \ \ t^{2}\int_{0}^{1}d\rho\int_{0}^{\rho}(1-r)G_{t}^{j}(tr)H^{k}(tr)dr.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}{\color{red}\left(\frac{1}{9}\delta^{il}\delta^{jk}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JI;P)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-t^{2}\frac{1}{2}\int_{0}^{1}\left(\int_{0}^{\rho}\psi(X_{tr})dr\right)\otimes\phi_{j}(X_{t\rho})\frac{X_{t\rho}^{j}}{1-\rho}d\rho\otimes\int_{0}^{1}\phi_{k}\left(X_{t\theta}\right)\otimes\phi_{l}\left(X_{t\theta}\right)a^{kl}\left(X_{t\theta}\right)d\theta.
+\]
+
+\end_inset
+
+Possibilities: 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Expand 
+\begin_inset Formula $\phi_{j}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iii) Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iv) Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\partial_{i}\psi\otimes\phi_{j}\otimes\phi_{k}\otimes\phi_{l}\delta^{kl}\times\\
+ & \ \ \ \frac{1}{2}t^{2}\int_{0}^{1}\int_{0}^{\rho}(1-r)G^{i}(tr)G^{j}(t\rho)drd\rho\int_{0}^{1}d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}-\partial_{i}\psi\otimes\phi_{j}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}\left(\frac{1}{12}\delta^{ij}\delta^{kl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{j}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\psi\otimes\partial_{i}\phi_{j}\otimes\phi_{k}\otimes\phi_{l}\delta^{kl}\times\\
+ & \ \ \ \frac{1}{2}t^{2}\int_{0}^{1}\rho(1-\rho)G^{i}(t\rho)G^{j}(t\rho)d\rho\int_{0}^{1}d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}-\psi\otimes\partial_{i}\phi_{j}\otimes\phi_{k}\otimes\phi_{l}\times t^{3}\left(\frac{1}{6}\delta^{ij}\delta^{kl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\psi\otimes\phi_{j}\otimes\partial_{i}\phi_{k}\otimes\phi_{l}\delta^{kl}\times\\
+ & \ \ \ \frac{1}{2}t^{2}\int_{0}^{1}\rho G^{j}(t\rho)d\rho\int_{0}^{1}(1-\theta)G^{i}(t\theta))d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}-\psi\otimes\phi_{j}\otimes\partial_{i}\phi_{k}\otimes\phi_{l}\times t^{3}\left(\frac{1}{12}\delta^{ij}\delta^{kl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\psi\otimes\phi_{j}\otimes\phi_{k}\otimes\partial_{i}\phi_{l}\delta^{kl}\times\\
+ & \ \ \ \frac{1}{2}t^{2}\int_{0}^{1}\rho G^{j}(t\rho)d\rho\int_{0}^{1}(1-\theta)G^{i}(t\theta))d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}-\psi\otimes\phi_{j}\otimes\phi_{k}\otimes\partial_{i}\phi_{l}\times t^{3}\left(\frac{1}{12}\delta^{ij}\delta^{kl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm IJ;P)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-t^{2}\frac{1}{2}\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(X_{tr})\frac{X_{tr}^{i}}{1-r}dr\right)\psi(X_{t\rho})d\rho\otimes\int_{0}^{1}\phi_{k}\left(X_{t\theta}\right)\otimes\phi_{l}\left(X_{t\theta}\right)a^{kl}\left(X_{t\theta}\right)d\theta
+\]
+
+\end_inset
+
+Possibilities: 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Expand 
+\begin_inset Formula $\phi_{j}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iii) Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iv) Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\delta^{kl}\times\\
+ & \ \ \ \frac{1}{2}t^{2}\int_{0}^{1}\int_{0}^{\rho}(1-r)G^{j}(tr)G^{i}(tr)drd\rho\int_{0}^{1}d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}-\partial_{j}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}\left(\frac{1}{12}\delta^{ij}\delta^{kl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\delta^{kl}\times\\
+ & \ \ \ \frac{1}{2}t^{2}\int_{0}^{1}\int_{0}^{\rho}(1-\rho)G^{i}(tr)G^{j}(t\rho)drd\rho\int_{0}^{1}d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}-\phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\times t^{3}\left(\frac{1}{24}\delta^{ij}\delta^{kl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\delta^{kl}\times\\
+ & \ \ \ \frac{1}{2}t^{2}\int_{0}^{1}\int_{0}^{\rho}G^{i}(tr)drd\rho\int_{0}^{1}(1-\theta)G^{j}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}-\phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}\left(\frac{1}{24}\delta^{ij}\delta^{kl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & -\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\delta^{kl}\times\\
+ & \ \ \ \frac{1}{2}t^{2}\int_{0}^{1}\int_{0}^{\rho}G^{i}(tr)drd\rho\int_{0}^{1}(1-\theta)G^{j}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}-\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}\left(\frac{1}{24}\delta^{ij}\delta^{kl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JK;P)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{2}t\int_{0}^{t}\Xi_{i}(v)(\sigma dB)_{v}^{i}\otimes\int_{0}^{1}\phi_{k}\left(X_{t\theta}\right)\otimes\phi_{l}\left(X_{t\theta}\right)a^{kl}\left(X_{t\theta}\right)d\theta.
+\]
+
+\end_inset
+
+Here
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Xi_{i}(v)\triangleq\left(\int_{0}^{v}\psi(X_{u})du\right)\otimes\phi_{i}(X_{v})
+\]
+
+\end_inset
+
+Possibilities: 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Freeze both;
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \psi\otimes\phi_{i}\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\delta^{kl}\times\\
+ & \ \ \ \frac{1}{2}t\int_{0}^{1}\left(\int_{0}^{t\theta}v(\sigma dB)_{v}^{i}\right)(1-\theta)G^{j}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}\psi\otimes\phi_{i}\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}\left(\frac{1}{24}\delta^{ij}\delta^{kl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \psi\otimes\phi_{i}\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\delta^{kl}\times\\
+ & \ \ \ \frac{1}{2}t\int_{0}^{1}\left(\int_{0}^{t\theta}v(\sigma dB)_{v}^{i}\right)(1-\theta)G^{j}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}\left(\frac{1}{24}\delta^{ij}\delta^{kl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Freeze both
+\end_layout
+
+\begin_layout Standard
+The result is 0.
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm KJ;P)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{2}t^{2}\int_{0}^{1}\left(\int_{0}^{t\rho}\phi_{i}(X_{u})(\sigma dB)_{u}^{i}\right)\otimes\psi(X_{t\rho})d\rho\otimes\otimes\int_{0}^{1}\phi_{k}\left(X_{t\theta}\right)\otimes\phi_{l}\left(X_{t\theta}\right)a^{kl}\left(X_{t\theta}\right)d\theta.
+\]
+
+\end_inset
+
+Possibilities: 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(i) Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(ii) Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iii) Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+(iv) Freeze all;
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \phi_{i}\otimes\partial_{j}\psi\otimes\phi_{k}\otimes\phi_{l}\delta^{kl}\times\\
+ & \ \ \ \frac{1}{2}t^{2}\int_{0}^{1}\left(\int_{0}^{t\rho}(\sigma dB)_{u}^{i}\right)(1-\rho)G^{j}(t\rho)d\rho\int_{0}^{1}d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}\psi\otimes\phi_{i}\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}\left(\frac{1}{8}\delta^{ij}\delta^{kl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\delta^{kl}\times\\
+ & \ \ \ \frac{1}{2}t^{2}\int_{0}^{1}\left(\int_{0}^{t\rho}(\sigma dB)_{u}^{i}\right)d\rho\int_{0}^{1}(1-\theta)G^{j}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}\phi_{i}\otimes\psi\otimes\partial_{j}\phi_{k}\otimes\phi_{l}\times t^{3}\left(\frac{1}{12}\delta^{ij}\delta^{kl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expand 
+\begin_inset Formula $\phi_{l}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\delta^{kl}\times\\
+ & \ \ \ \frac{1}{2}t^{2}\int_{0}^{1}\left(\int_{0}^{t\rho}(\sigma dB)_{u}^{i}\right)d\rho\int_{0}^{1}(1-\theta)G^{j}(t\theta)d\theta.
+\end{align*}
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}\phi_{i}\otimes\psi\otimes\phi_{k}\otimes\partial_{j}\phi_{l}\times t^{3}\left(\frac{1}{12}\delta^{ij}\delta^{kl}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Freeze all
+\end_layout
+
+\begin_layout Standard
+The reuslt is 0.
+\end_layout
+
+\end_body
+\end_document

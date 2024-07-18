@@ -1,0 +1,829 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Checking Calculations for Degree 
+\begin_inset Formula $3$
+\end_inset
+
+ Case
+\end_layout
+
+\begin_layout Standard
+Notation 1: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I:=-\phi_{i}(X_{u})\frac{X_{u}^{i}}{t-u}du
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+J:=\psi(X_{u})du,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K:=\phi_{i}(X_{u})(\sigma dB)_{u}^{i},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P:=\frac{1}{2}\int_{0}^{t}\phi_{i}\left(X_{v}\right)\otimes\phi_{j}\left(X_{v}\right)a^{ij}\left(X_{v}\right)dv.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notation 2:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi=\phi_{j}\bar{b}^{j}+\frac{1}{2}\partial_{j}\phi_{j},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notation 2:
+\begin_inset Formula 
+\[
+Q^{i}(s)\triangleq\int_{0}^{s}\phi_{i}(X_{u})(\sigma dB)_{u}^{i},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G^{i}(s)\triangleq t\int_{0}^{s}\frac{(\sigma dB)_{u}^{i}}{t-u},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H^{i}(s)\triangleq\int_{0}^{s}(\sigma dB)_{u}^{i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The expansions: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{i}(X_{tr})=\phi_{i}(0)+\left(\partial_{p}\phi_{i}(0)(1-r)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\right)+\left(\frac{1}{2}\partial_{pq}^{2}\phi_{i}(0)(1-r)^{2}\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{p}}{t-u}\right)\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{q}}{t-u}\right)\right)+\ldots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{X_{tr}^{i}}{1-r}=\left(t\cdot\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)+\left(\partial_{p}\bar{b^{i}}(0)\cdot t^{2}\cdot\int_{0}^{r}\int_{0}^{t\eta}\frac{(\sigma dB)_{u}^{p}}{t-u}d\eta\right)+\ldots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm IJ;JI)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+t^{2}\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(X_{tr})\frac{X_{tr}^{i}}{1-r}dr\right)\otimes\psi(X_{t\rho})d\rho\otimes\int_{0}^{1}\left(\int_{0}^{\theta}\psi(X_{t\delta})d\delta\right)\otimes\phi_{j}(X_{t\theta})\frac{X_{t\theta}^{j}}{1-\theta}d\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{j}\otimes\psi\otimes\psi\otimes\phi_{j}\times t^{4}\int_{0}^{1}\int_{0}^{1}\int_{0}^{\theta}\int_{0}^{\rho}\theta\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)drd\rho d\delta d\theta.
+\]
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}\phi_{i}\otimes\psi\otimes\psi\otimes\phi_{j}\times t^{3}\frac{1}{6}\delta^{ij}.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm IJ;IJ)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+t^{2}\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(X_{tr})\frac{X_{tr}^{i}}{1-r}dr\right)\otimes\psi(X_{t\rho})d\rho\otimes\int_{0}^{1}\left(\int_{0}^{\theta}\phi_{j}(X_{t\delta})\frac{X_{t\delta}^{j}}{1-\delta}d\delta\right)\otimes\psi(X_{t\theta})d\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}\otimes\psi\otimes\phi_{j}\otimes\psi\times t^{4}\int_{0}^{1}\int_{0}^{1}\int_{0}^{\theta}\int_{0}^{\rho}\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)drd\delta d\rho d\theta.
+\]
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}\phi_{i}\otimes\psi\otimes\phi_{j}\otimes\psi\times t^{3}\frac{1}{12}\delta^{ij}.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JI;JK)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-t^{1}\int_{0}^{1}\left(\int_{0}^{\rho}\psi(X_{tr})dr\right)\otimes\phi_{i}(X_{t\rho})\frac{X_{t\rho}^{i}}{1-\rho}d\rho\otimes\int_{0}^{t}\left(\int_{0}^{u}\psi(X_{v})dv\right)\otimes\phi_{j}(X_{u})(\sigma dB)_{u}^{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=-\psi\otimes\phi_{i}\otimes\psi\otimes\phi_{j}\times t^{2}\int_{0}^{1}\rho\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\rho}u(\sigma dB)_{u}^{j}\right)d\rho.
+\]
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}\psi\otimes\phi_{i}\otimes\psi\otimes\phi_{j}\times t^{3}\left(-\frac{5}{12}\delta^{ij}\right).}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm IJ;JK)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-t^{1}\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(X_{tr})\frac{X_{tr}^{i}}{1-r}dr\right)\otimes\psi(X_{t\rho})d\rho\otimes\int_{0}^{t}\left(\int_{0}^{u}\psi(X_{v})dv\right)\otimes\phi_{j}(X_{u})(\sigma dB)_{u}^{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=-\phi_{i}\otimes\psi\otimes\psi\otimes\phi_{j}\times t^{2}\int_{0}^{1}\int_{0}^{\rho}\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{tr}u(\sigma dB)_{u}^{j}\right)drd\rho.
+\]
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}\phi_{i}\otimes\psi\otimes\psi\otimes\phi_{j}\times t^{3}\left(-\frac{1}{12}\delta^{ij}\right).}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JI;KJ)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-t^{2}\int_{0}^{1}\left(\int_{0}^{\rho}\psi(X_{tr})dr\right)\otimes\phi_{i}(X_{t\rho})\frac{X_{t\rho}^{i}}{1-\rho}d\rho\otimes\int_{0}^{1}\left(\int_{0}^{t\theta}\phi_{j}(X_{u})(\sigma dB)_{u}^{j}\right)\otimes\psi(X_{t\theta})d\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=-\psi\otimes\phi_{i}\otimes\phi_{j}\otimes\psi\times t^{3}\int_{0}^{1}\int_{0}^{1}\rho\left(\int_{0}^{t\rho}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\theta}(\sigma dB)_{u}^{j}\right)d\rho d\theta.
+\]
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}\psi\otimes\phi_{i}\otimes\phi_{j}\otimes\psi\times t^{3}\left(-\frac{1}{3}\delta^{ij}\right).}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm IJ;KJ)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-t^{2}\int_{0}^{1}\left(\int_{0}^{\rho}\phi_{i}(X_{tr})\frac{X_{tr}^{i}}{1-r}dr\right)\otimes\psi(X_{t\rho})d\rho\otimes\int_{0}^{1}\left(\int_{0}^{t\theta}\phi_{j}(X_{u})(\sigma dB)_{u}^{j}\right)\otimes\psi(X_{t\theta})d\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=-\phi_{i}\otimes\psi\otimes\phi_{j}\otimes\psi\times t^{3}\int_{0}^{1}\int_{0}^{1}\int_{0}^{\rho}\left(\int_{0}^{tr}\frac{(\sigma dB)_{u}^{i}}{t-u}\right)\left(\int_{0}^{t\theta}(\sigma dB)_{u}^{j}\right)drd\rho d\theta.
+\]
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}\phi_{i}\otimes\psi\otimes\phi_{j}\otimes\psi\times t^{3}\left(-\frac{1}{6}\delta^{ij}\right).}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JK;JK)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{t}\left(\int_{0}^{v}\psi(X_{u})du\right)\otimes\phi_{i}(X_{v})(\sigma dB)_{v}^{i}\otimes\int_{0}^{t}\left(\int_{0}^{v}\psi(X_{u})du\right)\otimes\phi_{j}(X_{v})(\sigma dB)_{v}^{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\int_{0}^{t}\left(\int_{0}^{v}\psi(X_{u})du\right)\otimes\phi_{i}(X_{v})(\sigma dB)_{v}^{i}\otimes\int_{0}^{t}\left(\int_{0}^{v}\psi(X_{u})du\right)\otimes\phi_{j}(X_{v})(\sigma dB)_{v}^{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}\otimes\psi\otimes\phi_{j}\otimes\psi\delta^{ij}\times\int_{0}^{t}v^{2}dv
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}\otimes\psi\otimes\phi_{j}\otimes\psi\delta^{ij}\times t^{2}\int_{0}^{1}\rho^{2}d\rho
+\]
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}\phi_{i}\otimes\psi\otimes\phi_{j}\otimes\psi\times t^{3}\left(\frac{1}{3}\delta^{ij}\right).}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JK;KJ)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+t\int_{0}^{t}\left(\int_{0}^{v}\psi(X_{u})du\right)\otimes\phi_{i}(X_{v})(\sigma dB)_{v}^{i}\otimes\int_{0}^{1}\left(\int_{0}^{t\theta}\phi_{j}(X_{u})(\sigma dB)_{u}^{j}\right)\otimes\psi(X_{t\theta})d\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\psi\otimes\phi_{i}\otimes\psi\otimes\phi_{j}\times t\int_{0}^{1}\left(\int_{0}^{t\theta}v(\sigma dB)_{v}^{i}\right)\left(\int_{0}^{t\theta}(\sigma dB)_{u}^{j}\right)d\theta
+\]
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}\psi\otimes\phi_{i}\otimes\psi\otimes\phi_{j}\times t^{3}\left(\frac{1}{6}\delta^{ij}\right).}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm KJ;KJ)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+t^{2}\int_{0}^{1}\left(\int_{0}^{t\rho}\phi_{i}(X_{u})(\sigma dB)_{u}^{i}\right)\otimes\psi(X_{t\rho})d\rho\otimes\int_{0}^{1}\left(\int_{0}^{t\theta}\phi_{j}(X_{u})(\sigma dB)_{u}^{j}\right)\otimes\psi(X_{t\theta})d\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\phi_{i}\otimes\psi\otimes\phi_{j}\otimes\psi\times t^{2}\int_{0}^{1}\int_{0}^{1}\left(\int_{0}^{t\rho}(\sigma dB)_{v}^{i}\right)\left(\int_{0}^{t\theta}(\sigma dB)_{u}^{j}\right)d\rho d\theta
+\]
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}\phi_{i}\otimes\psi\otimes\phi_{j}\otimes\psi\times t^{3}\left(\frac{1}{3}\delta^{ij}\right).}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JJ;II)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+t^{2}\int_{0}^{1}\left(\int_{0}^{\rho}\psi(X_{tr})dr\right)\otimes\psi(X_{t\rho})d\rho\otimes\int_{0}^{1}\left(\int_{0}^{\theta}\phi_{i}(X_{t\delta})\frac{X_{t\delta}^{i}}{1-\delta}d\delta\right)\otimes\phi_{j}(X_{t\theta})\frac{X_{t\theta}^{j}}{1-\theta}d\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\psi\otimes\psi\otimes\phi_{i}\otimes\phi_{j}\times t^{4}\int_{0}^{1}\int_{0}^{1}\int_{0}^{\theta}\rho\left(\int_{0}^{t\delta}\frac{(\sigma dB)_{v}^{i}}{t-u}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\delta d\rho d\theta
+\]
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}\psi\otimes\psi\otimes\phi_{i}\otimes\phi_{j}\times t^{3}\left(\frac{1}{4}\delta^{ij}\right).}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JJ;IK)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+t^{2}\int_{0}^{1}\left(\int_{0}^{\rho}\psi(X_{tr})dr\right)\otimes\psi(X_{t\rho})d\rho\otimes\int_{0}^{t}\left(\int_{0}^{\theta}\phi_{i}(X_{t\delta})\frac{X_{t\delta}^{i}}{1-\delta}d\delta\right)\otimes\phi_{j}(X_{u})(\sigma dB)_{u}^{j}
+\]
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}0.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JJ;KI)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+t^{2}\int_{0}^{1}\left(\int_{0}^{\rho}\psi(X_{tr})dr\right)\otimes\psi(X_{t\rho})d\rho\otimes\int_{0}^{1}\left(\int_{0}^{t\theta}\phi_{i}(X_{u})(\sigma dB)_{u}^{i}\right)\otimes\phi_{j}(X_{t\theta})\frac{X_{t\theta}^{j}}{1-\theta}d\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\psi\otimes\psi\otimes\phi_{i}\otimes\phi_{j}\times t^{3}\int_{0}^{1}\int_{0}^{1}\rho\left(\int_{0}^{t\theta}(\sigma dB)_{v}^{i}\right)\left(\int_{0}^{t\theta}\frac{(\sigma dB)_{u}^{j}}{t-u}\right)d\rho d\theta
+\]
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}\psi\otimes\psi\otimes\phi_{i}\otimes\phi_{j}\times t^{3}\left(\frac{1}{2}\delta^{ij}\right).}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Case 
+\begin_inset Formula $({\rm JJ;P)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Target
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{2}t^{2}\int_{0}^{1}\left(\int_{0}^{\rho}\psi(X_{tr})dr\right)\otimes\psi(X_{t\rho})d\rho\otimes\int_{0}^{1}\phi_{i}\left(X_{t\theta}\right)\otimes\phi_{j}\left(X_{t\theta}\right)a^{ij}\left(X_{t\theta}\right)d\theta.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\psi\otimes\psi\otimes\phi_{i}\otimes\phi_{j}\delta^{ij}\times t^{3}\frac{1}{2}\int_{0}^{1}\rho d\rho
+\]
+
+\end_inset
+
+
+\color red
+Result:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\color{red}\psi\otimes\psi\otimes\phi_{i}\otimes\phi_{j}\times t^{3}\left(\frac{1}{4}\delta^{ij}\right).}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

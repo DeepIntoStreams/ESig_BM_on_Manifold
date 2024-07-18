@@ -1,0 +1,966 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{graphicx}
+\usepackage{float}
+
+\date{}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+theorems-sec
+eqs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Summary of degree 3 and 2.5
+\end_layout
+
+\begin_layout Notation*
+We will use the folowing notation:
+\begin_inset Formula 
+\[
+\phi_{ijkl}\triangleq\phi_{i}\otimes\phi_{j}\otimes\phi_{k}\otimes\phi_{l},\ \phi_{i,p|jk|l,q}\triangleq\partial_{p}\phi_{i}\otimes\phi_{j}\otimes\phi_{k}\otimes\partial_{q}\phi_{l},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\phi_{i,pq|jkl}\triangleq\partial_{pq}^{2}\phi_{i}\otimes\phi_{j}\otimes\phi_{k}\otimes\phi_{l}\ \text{etc.}
+\]
+
+\end_inset
+
+Recall the following function:
+\begin_inset Formula 
+\[
+\bar{b}(x)\triangleq b(x)+\nabla_{x}G_{1}(x,0).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Degree 
+\begin_inset Formula $3$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+The coefficient is 
+\begin_inset Formula 
+\[
+\frac{1}{48}\phi_{i,i|k|j,j|k}+{\color{red}\frac{1}{48}}\phi_{k|i,i|k|j,j}-{\color{red}\frac{1}{48}}\phi_{i,i|kk|j,j}-{\color{red}\frac{1}{48}}\phi_{k|i,i|j,j|k}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Degree 
+\begin_inset Formula $2.5$
+\end_inset
+
+ Case
+\end_layout
+
+\begin_layout Standard
+The quantity 
+\begin_inset Formula $\pi_{2}\otimes\pi_{2}$
+\end_inset
+
+ (up to order 
+\begin_inset Formula $t^{3}$
+\end_inset
+
+) looks like 
+\begin_inset Formula 
+\[
+\left(({\rm I}+J+K)\otimes({\rm I}+J+K)+P\right)\otimes(({\rm I}+{\rm J}+{\rm K})\otimes({\rm I}+{\rm J}+{\rm K})+{\rm P})
+\]
+
+\end_inset
+
+Note that type 
+\begin_inset Formula ${\rm I},{\rm K}$
+\end_inset
+
+-terms have order 
+\begin_inset Formula $\sqrt{t}$
+\end_inset
+
+ and type 
+\begin_inset Formula ${\rm J},{\rm P}$
+\end_inset
+
+ terms have order 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Choosing 
+\begin_inset Formula ${\rm P}$
+\end_inset
+
+ (order structure: 
+\begin_inset Formula $1.5+1$
+\end_inset
+
+ or 
+\begin_inset Formula $1+1.5$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm J},{\rm I};{\rm P}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This means the term coming from 
+\begin_inset Formula $({\rm J}\otimes{\rm I})\otimes{\rm P}$
+\end_inset
+
+.
+ Similar convention applies to other cases.
+ The coefficient is 
+\begin_inset Formula 
+\begin{align*}
+ & -\frac{1}{12}\partial_{i}\bar{b}^{j}\phi_{jikk}-\frac{1}{24}\phi_{j,ij|ikk}-\frac{1}{12}\phi_{i,i|j,j|kk}-\frac{1}{24}\phi_{j,j|i|k,i|k}-\frac{1}{24}\phi_{j,j|i|k|k,i}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm J},{\rm K};{\rm P}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient is
+\begin_inset Formula 
+\[
+\frac{1}{48}\phi_{j,j|i|k,i|k}+\frac{1}{48}\phi_{j,j|ik|k,i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm I},{\rm J};{\rm P}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient is
+\begin_inset Formula 
+\[
+-\frac{1}{24}\phi_{i,i|j,j|kk}-\frac{1}{24}\partial_{i}\bar{b}^{j}\phi_{ijkk}-\frac{1}{48}\phi_{i|j,ij|kk}-\frac{1}{48}\phi_{i|j,j|k,i|k}-\frac{1}{48}\phi_{i|j,j|k|k,i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm K},{\rm J};{\rm P}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{8}\partial_{i}\bar{b}^{j}\phi_{ijkk}+\frac{1}{16}\phi_{i|j,ij|kk}+\frac{1}{24}\phi_{i|j,j|k,i|k}+\frac{1}{24}\phi_{i|j,j|k|k,i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Swapping the two slots
+\end_layout
+
+\begin_layout Standard
+By symmetry, we have 
+\begin_inset Formula 
+\[
+C_{P;{\rm J},{\rm I}}=\sigma(C_{{\rm I},{\rm J};P})\ \text{etc.}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\sigma:E^{\otimes4}\rightarrow E^{\otimes4}$
+\end_inset
+
+ is the linear map induced by 
+\begin_inset Formula 
+\[
+\sigma(a\otimes b\otimes c\otimes d)=c\otimes d\otimes a\otimes b.
+\]
+
+\end_inset
+
+Therefore, we also have coefficients
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm P;{\rm J},{\rm I}}} & =-\frac{1}{12}\partial_{i}\bar{b}^{j}\phi_{kkji}-\frac{1}{24}\phi_{kk|j,ij|i}-\frac{1}{12}\phi_{kk|i,i|j,j}-\frac{1}{24}\phi_{k,i|k|j,j|i}-\frac{1}{24}\phi_{k|k,i|j,j|i},\\
+C_{{\rm P};{\rm J,{\rm K}}} & =\frac{1}{48}\phi_{k,i|k|j,j|i}+\frac{1}{48}\phi_{k|k,i|j,j|i},\\
+C_{P;{\rm I,{\rm J}}} & =-\frac{1}{24}\phi_{kk|i,i|j,j}-\frac{1}{24}\partial_{i}\bar{b}^{j}\phi_{kkij}-\frac{1}{48}\phi_{kki|j,ij}-\frac{1}{48}\phi_{k,i|ki|j,j}-\frac{1}{48}\phi_{k|k,i|i|j,j},\\
+C_{P;{\rm K,{\rm J}}} & =\frac{1}{8}\partial_{i}\bar{b}^{j}\phi_{kkij}+\frac{1}{16}\phi_{kki|j,ij}+\frac{1}{24}\phi_{k,i|ki|j,j}+\frac{1}{24}\phi_{k|k,i|i|j,j}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Not choosing 
+\begin_inset Formula ${\rm P}$
+\end_inset
+
+ (order structure: 
+\begin_inset Formula $1.5+(0.5+0.5)$
+\end_inset
+
+ or 
+\begin_inset Formula $(0.5+0.5)+1.5$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm J,{\rm I}};{\rm I,{\rm I}}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm I,I};{\rm J,I}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient for the case 
+\begin_inset Formula ${\rm J,I;I,I}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm J,I;I,I}}= & -\frac{1}{12}\partial_{i}\bar{b}^{j}\phi_{jikk}-\frac{55}{432}\partial_{i}\bar{b}^{j}\phi_{jkik}-\frac{25}{432}\partial_{i}\bar{b}^{j}\phi_{jkki}-\frac{1}{24}\phi_{j,ij|ikk}-\frac{55}{864}\phi_{j,ij|kik}-\frac{25}{864}\phi_{j,ij|kki}\\
+ & -\frac{1}{12}\phi_{i,i|j,j|kk}-\frac{19}{432}\phi_{i,i|j,k|jk}-\frac{19}{432}\phi_{i,i|j,k|kj}-\frac{35}{288}\phi_{i,i|j|k,k|j}-\frac{7}{144}\phi_{i,i|j|k,j|k}-\frac{7}{144}\phi_{i,i|j|j,k|k}\\
+ & -\frac{19}{288}\phi_{i,i|jj|k,k}-\frac{1}{24}\phi_{i,i|jk|k,j}-\frac{1}{24}\phi_{i,i|jk|j,k}.
+\end{align*}
+
+\end_inset
+
+By symmetry,
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm I,I;J,I}}= & -\frac{1}{12}\partial_{i}\bar{b}^{j}\phi_{kkji}-\frac{55}{432}\partial_{i}\bar{b}^{j}\phi_{ikjk}-\frac{25}{432}\partial_{i}\bar{b}^{j}\phi_{kijk}-\frac{1}{24}\phi_{kk|j,ij|i}-\frac{55}{864}\phi_{ik|j,ij|k}-\frac{25}{864}\phi_{ki|j,ij|k}\\
+ & -\frac{1}{12}\phi_{kk|i,i|j,j}-\frac{19}{432}\phi_{jk|i,i|j,k}-\frac{19}{432}\phi_{kj|i,i|j,k}-\frac{35}{288}\phi_{k,k|j|i,i|j}-\frac{7}{144}\phi_{k,j|k|i,i|j}-\frac{7}{144}\phi_{j,k|k|i,i|j}\\
+ & -\frac{19}{288}\phi_{j|k,k|i,i|j}-\frac{1}{24}\phi_{k|k,j|i,i|j}-\frac{1}{24}\phi_{k|j,k|i,i|j}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm I,J;I,I}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm I,I;I,J}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient for the case 
+\begin_inset Formula ${\rm I,J;I,I}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm I,J;I,I}}= & -\frac{1}{24}\phi_{i,i|j,j|kk}-\frac{1}{54}\phi_{i,j|k,k|ij}-\frac{1}{54}\phi_{i,j|k,k|ji}-\frac{1}{24}\partial_{i}\bar{b}^{j}\phi_{ijkk}-\frac{1}{48}\phi_{i|j,ij|kk}\\
+ & -\frac{17}{432}\partial_{j}\bar{b}^{k}\phi_{ikij}-\frac{17}{864}\phi_{i|k,jk|ij}-\frac{11}{432}\partial_{j}\bar{b}^{k}\phi_{ikji}-\frac{11}{864}\phi_{i|k,jk|ji}-\frac{1}{32}\phi_{i|j,j|k,k|i}\\
+ & -\frac{1}{48}\phi_{i|j,j|k,i|k}-\frac{1}{48}\phi_{i|j,j|i,k|k}-\frac{1}{32}\phi_{i|j,j|i|k,k}-\frac{1}{72}\phi_{i|j,j|k|k,i}-\frac{1}{72}\phi_{i|j,j|k|i,k}.
+\end{align*}
+
+\end_inset
+
+By symmetry,
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm I,I;I,J}}= & -\frac{1}{24}\phi_{kk|i,i|j,j}-\frac{1}{54}\phi_{ij|i,j|k,k}-\frac{1}{54}\phi_{ji|i,j|k,k}-\frac{1}{24}\partial_{i}\bar{b}^{j}\phi_{kkij}-\frac{1}{48}\phi_{kki|j,ij}\\
+ & -\frac{17}{432}\partial_{j}\bar{b}^{k}\phi_{ijik}-\frac{17}{864}\phi_{iji|k,jk}-\frac{11}{432}\partial_{j}\bar{b}^{k}\phi_{jiik}-\frac{11}{864}\phi_{jii|k,jk}-\frac{1}{32}\phi_{k,k|ii|j,j}\\
+ & -\frac{1}{48}\phi_{k,i|ki|j,j}-\frac{1}{48}\phi_{i,k|ki|j,j}-\frac{1}{32}\phi_{i|k,k|i|j,j}-\frac{1}{72}\phi_{k|k,i|i|j,j}-\frac{1}{72}\phi_{k|i,k|i|j,j}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm J,K};{\rm I,I}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm I,I;J,K}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient for the case 
+\begin_inset Formula ${\rm J,K;I,I}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm J,K;I,I}}= & \frac{13}{144}\phi_{i,i|j|k,k|j}+\frac{1}{36}\phi_{i,i|j|j,k|k}+\frac{1}{36}\phi_{i,i|j|k,j|k}+\frac{1}{36}\phi_{k,k|ij|j,i}\\
+ & +\frac{1}{36}\phi_{k,k|ij|i,j}+\frac{5}{144}\phi_{k,k|ii|j,j}+\frac{13}{144}\partial_{i}\bar{b}^{k}\phi_{kjij}+\frac{13}{288}\phi_{k,ik|jij}\\
+ & +\frac{1}{48}\partial_{i}\bar{b}^{k}\phi_{kjji}+\frac{1}{96}\phi_{k,ik|jji}+\frac{7}{144}\phi_{k,k|i,j|ji}+\frac{1}{48}\phi_{k,k|i,j|ij}.
+\end{align*}
+
+\end_inset
+
+By symmetry,
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm I,I;J,K}}= & \frac{13}{144}\phi_{k,k|j|i,i|j}+\frac{1}{36}\phi_{j,k|k|i,i|j}+\frac{1}{36}\phi_{k,j|k|i,i|j}+\frac{1}{36}\phi_{j|j,i|k,k|i}\\
+ & +\frac{1}{36}\phi_{j|i,j|k,k|i}+\frac{5}{144}\phi_{i|j,j|k,k|i}+\frac{13}{144}\partial_{i}\bar{b}^{k}\phi_{ijkj}+\frac{13}{288}\phi_{ij|k,ik|j}\\
+ & +\frac{1}{48}\partial_{i}\bar{b}^{k}\phi_{jikj}+\frac{1}{96}\phi_{jik,ik|j}+\frac{7}{144}\phi_{ji|k,k|i,j}+\frac{1}{48}\phi_{ij|k,k|i,j}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm K,J;I,I}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm I,I;K,J}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient for the case 
+\begin_inset Formula ${\rm K,J;I,I}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm K,J;I,I}}= & \frac{1}{8}\partial_{i}\bar{b}^{k}\phi_{ikjj}+\frac{1}{16}\phi_{i|k,ik|jj}+\frac{11}{144}\partial_{j}\bar{b}^{k}\phi_{ikij}+\frac{11}{288}\phi_{i|k,jk|ij}+\frac{1}{16}\partial_{j}\bar{b}^{k}\phi_{ikji}\\
+ & +\frac{1}{32}\phi_{i|k,jk|ji}+\frac{1}{24}\phi_{i|k,k|j,i|j}+\frac{1}{24}\phi_{i|k,k|i,j|j}+\frac{1}{16}\phi_{i|k,k|j,j|i}+\frac{1}{16}\phi_{i|k,k|i|j,j}\\
+ & +\frac{1}{36}\phi_{i|k,k|j|j,i}+\frac{1}{36}\phi_{i|k,k|j|i,j}+\frac{1}{48}\phi_{i,j|k,k|ij}+\frac{5}{144}\phi_{i,j|k,k|ji}.
+\end{align*}
+
+\end_inset
+
+By symmetry,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm I,I;K,J}}= & \frac{1}{8}\partial_{i}\bar{b}^{k}\phi_{jjik}+\frac{1}{16}\phi_{jji|k,ik}+\frac{11}{144}\partial_{j}\bar{b}^{k}\phi_{ijik}+\frac{11}{288}\phi_{iji|k,jk}+\frac{1}{16}\partial_{j}\bar{b}^{k}\phi_{jiik}\\
+ & +\frac{1}{32}\phi_{jii|k,jk}+\frac{1}{24}\phi_{j,i|ji|k,k}+\frac{1}{24}\phi_{i,j|ji|k,k}+\frac{1}{16}\phi_{j,j|ii|k,k}+\frac{1}{16}\phi_{i|j,j|i|k,k}\\
+ & +\frac{1}{36}\phi_{j|j,i|i|k,k}+\frac{1}{36}\phi_{j|i,j|i|k,k}+\frac{1}{48}\phi_{ij|i,j|k,k}+\frac{5}{144}\phi_{ji|i,j|k,k}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm I,J;I,K}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm I,K;I,J}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient for the case 
+\begin_inset Formula ${\rm I,J;I,K}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm I,J;I,K}}= & \frac{1}{216}\phi_{i,j|k,k|ij}+\frac{1}{216}\phi_{i,j|k,k|ji}+\frac{1}{54}\partial_{j}\bar{b}^{k}\phi_{ikij}+\frac{1}{108}\phi_{i|k,jk|ij}\\
+ & +\frac{1}{216}\partial_{j}\bar{b}^{k}\phi_{ikji}+\frac{1}{432}\phi_{i|k,jk|ji}+\frac{1}{96}\phi_{i|k,k|j,j|i}+\frac{1}{144}\phi_{i|k,k|j|i,j}.
+\end{align*}
+
+\end_inset
+
+By symmetry,
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm I,K;I,J}}= & \frac{1}{216}\phi_{ij|i,j|k,k}+\frac{1}{216}\phi_{ji|i,j|k,k}+\frac{1}{54}\partial_{j}\bar{b}^{k}\phi_{ijik}+\frac{1}{108}\phi_{iji|k,jk}\\
+ & +\frac{1}{216}\partial_{j}\bar{b}^{k}\phi_{jiik}+\frac{1}{432}\phi_{jii|k,jk}+\frac{1}{96}\phi_{j,j|ii|k,k}+\frac{1}{144}\phi_{j|i,j|i|k,k}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm J,I;I,K}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm I,K;J,I}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient for the case 
+\begin_inset Formula ${\rm J,I;I,K}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm J,I;I,K}} & =\frac{1}{108}\partial_{j}\bar{b}^{k}\phi_{kiij}+\frac{1}{216}\phi_{k,jk|iij}+\frac{17}{216}\partial_{j}\bar{b}^{k}\phi_{kiji}+\frac{17}{432}\phi_{k,jk|iji}\\
+ & +\frac{7}{432}\phi_{k,k|i,j|ji}+\frac{7}{432}\phi_{k,k|i,j|ij}+\frac{7}{96}\phi_{k,k|i|j,j|i}+\frac{5}{144}\phi_{k,k|ij|i,j}.
+\end{align*}
+
+\end_inset
+
+By symmetry,
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm I,K;J,I}} & =\frac{1}{108}\partial_{j}\bar{b}^{k}\phi_{ijki}+\frac{1}{216}\phi_{ij|k,jk|i}+\frac{17}{216}\partial_{j}\bar{b}^{k}\phi_{jiki}+\frac{17}{432}\phi_{ji|k,jk|i}\\
+ & +\frac{7}{432}\phi_{ji|k,k|i,j}+\frac{7}{432}\phi_{ij|k,k|i,j}+\frac{7}{96}\phi_{j,j|i|k,k|i}+\frac{5}{144}\phi_{j|i,j|k,k|i}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm K,J;I,K}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm I,K;K,J}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient for the case 
+\begin_inset Formula ${\rm K,J;I,K}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm K,J;I,K}} & =-\frac{1}{36}\partial_{j}\bar{b}^{k}\phi_{ikij}-\frac{1}{72}\phi_{i|k,jk|ij}-\frac{1}{72}\partial_{j}\bar{b}^{k}\phi_{ikji}-\frac{1}{144}\phi_{i|k,jk|ji}\\
+ & \ \ \ -\frac{1}{72}\partial_{j}\phi_{i}\otimes\partial_{k}\phi_{k}\otimes\phi_{j}\otimes\phi_{i}-\frac{1}{48}\phi_{i}\otimes\partial_{k}\phi_{k}\otimes\partial_{j}\phi_{j}\otimes\phi_{i}\\
+ & \ \ \ -\frac{1}{72}\phi_{i}\otimes\partial_{k}\phi_{k}\otimes\phi_{j}\otimes\partial_{j}\phi_{i}.
+\end{align*}
+
+\end_inset
+
+By symmetry,
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm I,K;K,J}} & =-\frac{1}{36}\partial_{j}\bar{b}^{k}\phi_{ijik}-\frac{1}{72}\phi_{iji|k,jk}-\frac{1}{72}\partial_{j}\bar{b}^{k}\phi_{jiik}-\frac{1}{144}\phi_{jii|k,jk}\\
+ & \ \ \ -\frac{1}{72}\phi_{j}\otimes\phi_{i}\otimes\partial_{j}\phi_{i}\otimes\partial_{k}\phi_{k}-\frac{1}{48}\partial_{j}\phi_{j}\otimes\phi_{i}\otimes\phi_{i}\otimes\partial_{k}\phi_{k}\\
+ & \ \ \ -\frac{1}{72}\phi_{j}\otimes\partial_{j}\phi_{i}\otimes\phi_{i}\otimes\partial_{k}\phi_{k}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm J,K;I,K}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm I,K;J,K}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient for the case 
+\begin_inset Formula ${\rm J,K;I,K}$
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C_{{\rm J,K;I,K}}=-\frac{5}{72}\partial_{j}\bar{b}^{k}\phi_{kiji}-\frac{5}{144}\phi_{k,jk|iji}-\frac{1}{36}\phi_{k,k|i,j|ji}-\frac{1}{16}\phi_{k,k|i|j,j|i}-\frac{1}{36}\phi_{k,k|ij|i,j}.
+\]
+
+\end_inset
+
+By symmetry,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C_{{\rm I,K;J,K}}=-\frac{5}{72}\partial_{j}\bar{b}^{k}\phi_{jiki}-\frac{5}{144}\phi_{ji|k,jk|i}-\frac{1}{36}\phi_{ji|k,k|i,j}-\frac{1}{16}\phi_{j,j|i|k,k|i}-\frac{1}{36}\phi_{j|i,j|k,k|i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm I,J;K,I}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm K,I;I,J}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient for the case 
+\begin_inset Formula ${\rm I,J;K,I}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm I,J;K,I}}= & \frac{1}{12}\phi_{i,i|k,k|jj}+\frac{7}{216}\phi_{i,j|k,k|ij}+\frac{7}{216}\phi_{i,j|k,k|ji}+\frac{1}{12}\partial_{i}\bar{b}^{k}\phi_{ikjj}+\frac{1}{24}\phi_{i|k,ik|jj}\\
+ & +\frac{13}{216}\partial_{j}\bar{b}^{k}\phi_{ikij}+\frac{13}{432}\phi_{i|k,jk|ij}+\frac{5}{108}\partial_{j}\bar{b}^{k}\phi_{ikji}+\frac{5}{216}\phi_{i|k,jk|ji}+\frac{5}{96}\phi_{i|k,k|i|j,j}\\
+ & +\frac{5}{144}\phi_{i|k,k|j|j,i}+\frac{5}{144}\phi_{i|k,k|j|i,j}+\frac{1}{24}\phi_{i|k,k|j,i|j}+\frac{1}{48}\phi_{i|k,k|i,j|j}.
+\end{align*}
+
+\end_inset
+
+By symmetry,
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm K,I;I,J}}= & \frac{1}{12}\phi_{jj|i,i|k,k}+\frac{7}{216}\phi_{ij|i,j|k,k}+\frac{7}{216}\phi_{ji|i,j|k,k}+\frac{1}{12}\partial_{i}\bar{b}^{k}\phi_{jjik}+\frac{1}{24}\phi_{jji|k,ik}\\
+ & +\frac{13}{216}\partial_{j}\bar{b}^{k}\phi_{ijik}+\frac{13}{432}\phi_{iji|k,jk}+\frac{5}{108}\partial_{j}\bar{b}^{k}\phi_{jiik}+\frac{5}{216}\phi_{jii|k,jk}+\frac{5}{96}\phi_{i|j,j|i|k,k}\\
+ & +\frac{5}{144}\phi_{j|j,i|i|k,k}+\frac{5}{144}\phi_{j|i,j|i|k,k}+\frac{1}{24}\phi_{j,i|ji|k,k}+\frac{1}{48}\phi_{i,j|ji|k,k}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm J,I;K,I}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm K,I;J,I}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient for the case 
+\begin_inset Formula ${\rm J,I;K,I}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm J,I;K,I}}= & \frac{1}{6}\partial_{i}\bar{b}^{k}\phi_{kijj}+\frac{1}{12}\phi_{k,ik|ijj}+\frac{13}{216}\partial_{j}\bar{b}^{k}\phi_{kiij}+\frac{13}{432}\phi_{k,jk|iij}+\frac{19}{108}\partial_{j}\bar{b}^{k}\phi_{kiji}\\
+ & +\frac{19}{216}\phi_{k,jk|iji}+\frac{1}{6}\phi_{k,k|i,i|jj}+\frac{31}{432}\phi_{k,k|i,j|ij}+\frac{31}{432}\phi_{k,k|i,j|ji}+\frac{11}{96}\phi_{k,k|ii|j,j}\\
+ & +\frac{13}{144}\phi_{k,k|ij|j,i}+\frac{13}{144}\phi_{k,k|ij|i,j}+\frac{1}{12}\phi_{k,k|i|j,i|j}+\frac{1}{16}\phi_{k,k|i|i,j|j}.
+\end{align*}
+
+\end_inset
+
+By symmetry,
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm K,I;J,I}}= & \frac{1}{6}\partial_{i}\bar{b}^{k}\phi_{jjki}+\frac{1}{12}\phi_{jj|k,ik|i}+\frac{13}{216}\partial_{j}\bar{b}^{k}\phi_{ijki}+\frac{13}{432}\phi_{ij|k,jk|i}+\frac{19}{108}\partial_{j}\bar{b}^{k}\phi_{jiki}\\
+ & +\frac{19}{216}\phi_{ji|k,jk|i}+\frac{1}{6}\phi_{jj|k,k|i,i}+\frac{31}{432}\phi_{ij|k,k|i,j}+\frac{31}{432}\phi_{ji|k,k|i,j}+\frac{11}{96}\phi_{i|j,j|k,k|i}\\
+ & +\frac{13}{144}\phi_{j|j,i|k,k|i}+\frac{13}{144}\phi_{j|i,j|k,k|i}+\frac{1}{12}\phi_{j,i|j|k,k|i}+\frac{1}{16}\phi_{i,j|j|k,k|i}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm K,J;K,I}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm K,I;K,J}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient for the case 
+\begin_inset Formula ${\rm K,J;K,I}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm K,J;K,I}}= & -\frac{1}{4}\partial_{i}\bar{b}^{k}\phi_{ikjj}-\frac{1}{8}\phi_{i|k,ik|jj}-\frac{1}{8}\partial_{j}\bar{b}^{k}\phi_{ikij}-\frac{1}{16}\phi_{i|k,jk|ij}-\frac{1}{9}\partial_{j}\bar{b}^{k}\phi_{ikji}\\
+ & -\frac{1}{18}\phi_{i|k,jk|ji}-\frac{5}{72}\phi_{i|k,k|j|j,i}-\frac{5}{48}\phi_{i|k,k|i|j,j}-\frac{5}{72}\phi_{i|k,k|j|i,j}\\
+ & -\frac{1}{12}\phi_{i|k,k|j,i|j}-\frac{1}{24}\phi_{i|k,k|i,j|j}-\frac{1}{18}\phi_{i,j|k,k|ji}-\frac{1}{24}\phi_{i,j|k,k|ij}.
+\end{align*}
+
+\end_inset
+
+By symmetry,
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm K,I;K,J}}= & -\frac{1}{4}\partial_{i}\bar{b}^{k}\phi_{jjik}-\frac{1}{8}\phi_{jji|k,ik}-\frac{1}{8}\partial_{j}\bar{b}^{k}\phi_{ijik}-\frac{1}{16}\phi_{iji|k,jk}-\frac{1}{9}\partial_{j}\bar{b}^{k}\phi_{jiik}\\
+ & -\frac{1}{18}\phi_{jii|k,jk}-\frac{5}{72}\phi_{j|j,i|i|k,k}-\frac{5}{48}\phi_{i|j,j|i|k,k}-\frac{5}{72}\phi_{j|i,j|i|k,k}\\
+ & -\frac{1}{12}\phi_{j,i|ji|k,k}-\frac{1}{24}\phi_{i,j|ji|k,k}-\frac{1}{18}\phi_{ji|i,j|k,k}-\frac{1}{24}\phi_{ij|i,j|k,k}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm J,K;K,I}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm K,I;J,K}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient for the case 
+\begin_inset Formula ${\rm J,K;K,I}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm J,K;K,I}}= & -\frac{1}{16}\phi_{k,k|ii|j,j}-\frac{1}{18}\phi_{k,k|ij|j,i}-\frac{1}{18}\phi_{k,k|ij|i,j}-\frac{1}{24}\phi_{k,k|i|j,i|j}\\
+ & -\frac{1}{18}\phi_{k,jk|iji}-\frac{1}{9}\partial_{j}\bar{b}^{k}\phi_{kiji}-\frac{5}{72}\phi_{k,k|i,j|ji}-\frac{1}{24}\partial_{j}\bar{b}^{k}\phi_{kiij}\\
+ & -\frac{1}{48}\phi_{k,jk|iij}-\frac{1}{24}\phi_{k,k|i,j|ij}-\frac{1}{24}\phi_{k,k|i|i,j|j}.
+\end{align*}
+
+\end_inset
+
+By symmetry,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm K,I;J,K}}= & -\frac{1}{16}\phi_{i|j,j|k,k|i}-\frac{1}{18}\phi_{j|j,i|k,k|i}-\frac{1}{18}\phi_{j|i,j|k,k|i}-\frac{1}{24}\phi_{j,i|j|k,k|i}\\
+ & -\frac{1}{18}\phi_{ji|k,jk|i}-\frac{1}{9}\partial_{j}\bar{b}^{k}\phi_{jiki}-\frac{5}{72}\phi_{ji|k,k|i,j}-\frac{1}{24}\partial_{j}\bar{b}^{k}\phi_{ijki}\\
+ & -\frac{1}{48}\phi_{ij|k,jk|i}-\frac{1}{24}\phi_{ij|k,k|i,j}-\frac{1}{24}\phi_{i,j|j|k,k|i}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm I,J;{\rm K,K}}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm K,K;I,J}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient for the case 
+\begin_inset Formula ${\rm I,J;K,K}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm I,J;K,K}}= & -\frac{1}{54}\phi_{i,j|k,k|ji}-\frac{1}{54}\phi_{i,j|k,k|ij}-\frac{5}{108}\partial_{j}\bar{b}^{k}\phi_{ikij}-\frac{5}{216}\phi_{i|k,jk|ij}\\
+ & -\frac{1}{54}\partial_{j}\bar{b}^{k}\phi_{ikji}-\frac{1}{108}\phi_{i|k,jk|ji}-\frac{1}{36}\phi_{i|k,k|j|i,j}.
+\end{align*}
+
+\end_inset
+
+By symmetry,
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm K,K;I,J}}= & -\frac{1}{54}\phi_{ji|i,j|k,k}-\frac{1}{54}\phi_{ij|i,j|k,k}-\frac{5}{108}\partial_{j}\bar{b}^{k}\phi_{ijik}-\frac{5}{216}\phi_{iji|k,jk}\\
+ & -\frac{1}{54}\partial_{j}\bar{b}^{k}\phi_{jiik}-\frac{1}{108}\phi_{jii|k,jk}-\frac{1}{36}\phi_{j|i,j|i|k,k}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm J,I;K,K}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm K,K;J,I}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient for the case 
+\begin_inset Formula ${\rm J,I;K,K}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm J,I;K,K}}= & -\frac{4}{27}\partial_{j}\bar{b}^{k}\phi_{kiji}-\frac{4}{54}\phi_{k,jk|iji}-\frac{1}{27}\partial_{j}\bar{b}^{k}\phi_{kiij}-\frac{1}{54}\phi_{k,jk|iij}\\
+ & -\frac{19}{432}\phi_{k,k|i,j|ij}-\frac{19}{432}\phi_{k,k|i,j|ji}-\frac{7}{72}\phi_{k,k|ij|i,j}.
+\end{align*}
+
+\end_inset
+
+By symmetry,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm K,K;J,I}}= & -\frac{4}{27}\partial_{j}\bar{b}^{k}\phi_{jiki}-\frac{4}{54}\phi_{ji|k,jk|i}-\frac{1}{27}\partial_{j}\bar{b}^{k}\phi_{ijki}-\frac{1}{54}\phi_{ij|k,jk|i}\\
+ & -\frac{19}{432}\phi_{ij|k,k|i,j|}-\frac{19}{432}\phi_{ji|k,k|i,j|}-\frac{7}{72}\phi_{j|i,j|k,k|i}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm J,K;K,K}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm K,K;{\rm J},{\rm K}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient for the case 
+\begin_inset Formula ${\rm J,K;K,K}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+C_{{\rm J,K;K,K}}=\frac{1}{9}\partial_{j}\bar{b}^{k}\phi_{kiji}+\frac{1}{18}\phi_{k,jk|iji}+\frac{5}{72}\phi_{k,k|i,j|ji}+\frac{5}{72}\phi_{k,k|ij|i,j}.
+\]
+
+\end_inset
+
+By symmetry,
+\begin_inset Formula 
+\[
+C_{{\rm K,K;J,K}}=\frac{1}{9}\partial_{j}\bar{b}^{k}\phi_{jiki}+\frac{1}{18}\phi_{ji|k,jk|i}+\frac{5}{72}\phi_{ji|k,k|i,j}+\frac{5}{72}\phi_{j|i,j|k,k|i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula ${\rm K,J;K,K}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm K,K;K,J}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient for the case 
+\begin_inset Formula ${\rm K,J;K,K}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm K,J;K,K}}= & \frac{1}{12}\partial_{j}\bar{b}^{k}\phi_{ikij}+\frac{1}{24}\phi_{i|k,jk|ij}+\frac{1}{18}\partial_{j}\bar{b}^{k}\phi_{ikji}+\frac{1}{36}\phi_{i|k,jk|ji}\\
+ & +\frac{1}{18}\phi_{i,j|k,k|ji}+\frac{1}{18}\phi_{i|k,k|j|i,j}.
+\end{align*}
+
+\end_inset
+
+By symmetry,
+\begin_inset Formula 
+\begin{align*}
+C_{{\rm K,K;K,J}}= & \frac{1}{12}\partial_{j}\bar{b}^{k}\phi_{ijik}+\frac{1}{24}\phi_{iji|k,jk}+\frac{1}{18}\partial_{j}\bar{b}^{k}\phi_{jiik}+\frac{1}{36}\phi_{jii|k,jk}\\
+ & +\frac{1}{18}\phi_{ji|i,j|k,k}+\frac{1}{18}\phi_{j|i,j|i|k,k}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -30,6 +30,8 @@ This is the directory that contains all the Mathematica source code files that i
         ├── caseCalculation_desktop.nb  # codes for builiding blocks
         ├── case_xxxx.nb                # codes for each case
         ├── result_2_data.nb            # codes to integrate all the results for total degree 2 case
+        ├── degree_3_check.nb           # codes to check degree 3 case
+        ├── degree_2dot5_check.nb       # codes to check degree 2.5 case
         ├── result_3_and_2dot5.nb       # codes to integrate all the results for total degree 3 case and total degree 2.5 case
         ├── result.nb                   # codes for simplification and final result
         ├── casexxxx.mx                 # binary files produced by Mathematica to store the results
@@ -47,18 +49,12 @@ This is the directory that contains the Lyx files that records the manual calcul
     ├── lyx 
         ├── caseCalculation.lyx         # explains the details of each function in caseCalculation_desktop.nb
         ├── case_xxxx.lyx               # manual calculation processes for each case
+        ├── degree_3_check.lyx          # degree 3 case check
+        ├── degree_2dot5_check.lyx      # degree 2.5 case check
+        ├── result_3_and_2dot5.lyx      # result of degree 3 and 2.5 cases
     ├── ...
 
 The naming convention for case_xxxx files follows the same rule as the src file layout.
-
-### pdf file layout
-This directory contains the PDF file that documents the results of the total degree 3 case and total degree 2.5 case.
-
-    .
-    ├── ...
-    ├── pdf 
-        ├── result_3_and_2dot5.pdf     # results for total degree 3 case and total degree 2.5 case
-    ├── ...
 
 ## The final result
 To get and see the final result, follow these steps in sequence:
